@@ -1,0 +1,64 @@
+body{
+    height: 100vh;
+    overflow-y: hidden;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    margin-left: 1%;
+}
+.bio{
+    width: 30%;
+}
+.instagram a, .email a{
+    text-decoration: none;
+    color: black;
+}
+.instagram a:hover, .email a:hover{
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+}
+.work img{
+    width: 12%;
+    margin-top: 3%;
+    margin-left: 5%;
+}
+.work{
+    width: 220vw;
+    overflow-x: scroll;
+}
+.cc{
+    font-size: 80%;
+    text-align: center;
+    margin-top: 3%;
+}
+
+@media screen and (max-width: 1024px) {
+    body{
+        height: 100vh;
+        overflow-y: scroll;
+    }
+    .work img{
+        width: 70%;
+        margin-top: 15%;
+        margin-left: 5%;
+    }
+    .work{
+        width: 100vw;
+        overflow-x: hidden;
+        text-align: center;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        width: 90%;
+        margin-left: 1%;
+    }
+    .bio{
+       display: none;
+    }
+}
