@@ -1,0 +1,203 @@
+body {
+    font-family: 'Apple Garamond', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+ 
+ body.no-scroll {
+    padding-top: 60px;
+    min-height: 100vh;
+    overflow-y: hidden;
+ }
+ 
+ body.scrollable {
+    padding-top: 60px;
+    min-height: 100vh;
+    overflow-y: auto;
+ }
+ 
+ header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+    white-space: nowrap;
+    gap: 30px;
+ }
+ 
+ .bio {
+    width: 30%;
+    white-space: normal;
+    text-align: left;
+ }
+ 
+ .about a, .instagram a, .email a, .bio, .home a {
+    font-size: clamp(12px, 2vw, 18px);
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+ }
+ 
+ .about a:hover, .instagram a:hover, .email a:hover, .home a:hover {
+    color: lightgrey;
+ }
+ 
+ .home a:visited {
+    color: inherit;
+ }
+ 
+ .work img {
+    max-width: 100%;
+ }
+ 
+ .work-img {
+    width: 30%;
+    display: inline-block;
+    margin-right: 2%;
+ }
+ 
+ .work {
+    margin-top: 6%;
+    margin-left: 5%;
+    align-items: baseline;
+    white-space: nowrap;
+ }
+ 
+ /* Reveal behavior */
+ #groove-overlay {
+    display: none;
+    cursor: pointer;
+ }
+ 
+ #groove-overlay.active {
+    display: block;
+ }
+ 
+ .cc {
+    margin-top: 40px;
+    position: fixed;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 80%;
+    text-align: center;
+    width: max-content;
+    z-index: 10;
+    transition: left 0.2s ease-in-out;
+ }
+ 
+ .foodbio {
+    margin-top: 80px;
+    text-align: center;
+ }
+ 
+ .aboutbio {
+    width: 50%;
+    font-size: 18pt;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+ }
+ 
+ .p1 {
+    width: 50%;
+    font-size: 18pt;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+ }
+ 
+ .instagram-media {
+    display: block;
+    margin: 20px auto;
+    max-width: 540px;
+    min-width: 326px;
+    width: 100%;
+    text-align: center;
+ }
+ 
+ .instagram-media iframe {
+    padding: 0 10px;
+ }
+ 
+ .surlatableimg {
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+ }
+ 
+ .surlatableimg img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+ }
+ 
+ @media screen and (max-width: 1024px) {
+    body {
+        height: auto;
+        overflow-y: scroll;
+    }
+ 
+    body.no-scroll {
+        overflow-y: auto;
+    }
+ 
+    .work {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        overflow-x: hidden;
+        gap: 20px;
+        padding: 10px 0;
+    }
+ 
+    .work img {
+        width: 100vw;
+        max-width: 100%;
+        height: auto;
+    }
+ 
+    .header {
+        width: 50%;
+        padding: 0 10px;
+    }
+ }
+ 
+ @media screen and (max-width: 768px) {
+    .bio {
+        width: 80%;
+        text-align: left;
+        white-space: nowrap;
+    }
+ 
+    header {
+        gap: 20px;
+        padding: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+    }
+ 
+    .about a, .instagram a, .email a, .bio, .home a {
+        font-size: clamp(13px, 2vw, 18px);
+        font-weight: 400;
+        text-decoration: none;
+        color: black;
+    }
+ }
