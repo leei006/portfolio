@@ -185,6 +185,12 @@
 }
 
 @media screen and (max-width: 768px) {
+   body {
+      flex-direction: column;
+      align-items: stretch;
+      padding-top: 0;         
+      height: auto;            
+    }
    header {
      gap: 20px;
      padding: 10px;
@@ -199,4 +205,33 @@
      text-align: center;
      white-space: normal;
    }
-}
+   .work {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      align-items: end; /* Align items by their bottoms */
+      gap: 20px;
+      padding: 40px;
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 2800px; /* Add margin-top to push it down */
+   }
+   .image-container {
+      width: 100vw;
+      height: 400px; /* subtract header height */
+      border: 1px solid black;
+    }
+  
+    #image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .bottom-content {
+      height: 50vh;
+      overflow: auto;
+      width: 100vw;
+    }
+  }
+
+
