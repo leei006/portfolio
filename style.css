@@ -47,6 +47,8 @@
    height: 100%;
    border: none;
  }
+
+ 
  
  #image {
    width: 100%;
@@ -68,7 +70,7 @@
    text-align: center;
    text-decoration: none;
    padding: 6px 0;
-   font-size: 12pt;
+   font-size: 14pt;
    font-weight: bold;
    color: black;
    background-color: white;
@@ -140,6 +142,23 @@
    box-sizing: border-box;
    margin-top: 300px; /* Add margin-top to push it down */
 }
+.designwork {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   align-items: center; /* Align items by their bottoms */
+   padding: 5px;
+   gap: 20px;
+   width: 50%;
+   box-sizing: border-box;
+}
+.designwork-img img {
+   width: 90%;
+   height: auto;
+   object-fit: contain;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
 
 
 
@@ -158,30 +177,7 @@
    margin-right: auto;
 }
 
-/* GROOVE FULLSCREEN OVERLAY */
-.groove-fullscreen {
-   display: none;
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100vw;
-   height: 100vh;
-   background-color: white;
-   justify-content: center;
-   align-items: center;
-   z-index: 1000;
-}
 
-.groove-fullscreen.active {
-   display: flex;
-}
-
-.groove-fullscreen img {
-   max-width: 100%;
-   max-height: 100%;
-   object-fit: contain;
-   cursor: pointer;
-}
 
 /* ANIMATION FOR FADE-IN EFFECT */
 @keyframes fadeInUp {
