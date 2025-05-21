@@ -6,11 +6,12 @@
   }
 
   body {
-   display: flex;
-   flex-direction: column;
-   height: 100vh;
-   margin: 0;
-   padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding-top: 80px;
+  padding-bottom: 20px; /* add this */
  }
  .iframe-container {
     width: 50%;
@@ -92,23 +93,56 @@
     color: black;
  }
 
- .slideshow {
-    width: 100vw;             
-    height: 90vh;             
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-color: transparent;
-    padding: 5px;               
-    margin: 0;                
-  }
-  .slideshow img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* or 'contain' if you prefer */
-  }
-  
+ .project-row {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch; /* ensures both columns have equal height */
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.project-left {
+  flex: 1;
+  max-width: 60%; /* adjust width as needed */
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.project-right {
+  flex: 1;
+  max-width: 40%;
+  display: flex;
+  align-items: stretch;
+}
+
+.description-box {
+  padding: 40px;
+  font-size: 14pt;
+  line-height: 1.4;
+  border: 2px solid black;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  margin-right: 20px; /* creates gap between box and viewport */
+}
+
+/* Adjust slideshow container */
+.slideshow {
+  width: 100%;
+  height: 70vh; /* or adjust as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slideshow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
   .tooltip-follow {
     position: relative;
   }
@@ -125,6 +159,24 @@
     transition: opacity 0.1s ease;
     z-index: 9999;
   }
+#diningshedlink {
+  color: yellowgreen;
+}
+#diningshedlink:hover {
+  color: green;
+}
+  @media screen and (max-width: 768px) {
+  .slideshow-row {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .slideshow {
+    width: 100vw;
+    height: 50vh;
+  }
+}
+
   
    
    

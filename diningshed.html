@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pandemic Dining Sheds</title>
+</head>
+<body>
+    <div class="header-container">
+        <a class="full-bar name" href="index.html">Dining Sheds Post-Pandemic</a>
+  
+        <div class="nav-bar">
+           <a class="nav-link design" href="design.html">Design</a>
+           <a class="nav-link photography" href="photography.html">Photography</a>
+           <a class="nav-link email" href="mailto:izzylee7@icloud.com">Email</a>
+           <a class="nav-link instagram" href="https://www.instagram.com/iyl.ee_/" target="_blank">Instagram</a>
+        </div>
+     </div>
+     <div id="gallery"></div>
+
+     <script>
+       const gallery = document.getElementById('gallery');
+       for (let i = 1; i <= 29; i++) {
+         const div = document.createElement('div');
+         div.className = 'gallery-item';  // changed class name here
+     
+         const img = document.createElement('img');
+         img.src = `img/collectionphotos${i}.jpg`;
+         img.alt = `Image ${i}`;
+     
+         div.appendChild(img);
+         gallery.appendChild(div);
+       }
+     </script>
+
+</body>
+</html>
