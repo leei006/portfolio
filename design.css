@@ -30,7 +30,7 @@ body {
   padding: 6px 0;
   font-size: 14pt;
   font-weight: bold;
-  color: black;
+  color: yellowgreen;
   background-color: white;
 }
 
@@ -85,12 +85,12 @@ body {
   display: flex;
   flex-direction: column; /* stack inside vertically */
   padding: 10px;
-  height: auto; /* let flexbox manage height */
 }
 
 /* Make slideshow fill its container height */
 .project-left .slideshow {
   flex-grow: 1;
+  height: 450px; /* or whatever height you want */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,7 +117,7 @@ body {
 .slideshow img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .tooltip-follow {
@@ -156,21 +156,23 @@ body {
   color: green;
 }
 
-@media screen and (max-width: 768px) {
-  .project-left,
-  .project-right {
-    padding: 8px;
-  }
-  .description-box {
-    font-size: clamp(11pt, 3vw, 13pt);
-    padding: 15px;
-  }
-}
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
+  body {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .project-left,
   .project-right {
     padding: 5px;
+  }
+  .project-left .slideshow {
+    flex-grow: 1;
+    height: 150px; /* or whatever height you want */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
   }
   .description-box {
     font-size: clamp(9pt, 4vw, 11pt);

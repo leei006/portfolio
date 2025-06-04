@@ -1,101 +1,59 @@
-// Gardeningbook
-
-const images = ['img/1.jpg', 'img/2.jpg', 'img/3.jpg', 'img/4.jpg', 'img/5.jpg', 'img/7.jpg']; // Add your image paths here
-let currentIndex = 0;
-
-function changeImage() {
-  currentIndex = (currentIndex + 1) % images.length;
-  document.getElementById('image').src = images[currentIndex];
-}
-
-// Change image every 2 seconds
-setInterval(changeImage, 2000);
-
-const slideshowImages = [];
-
-for (let i = 1; i <= 27; i++) {
-  slideshowImages.push(`img/gardeningbook${i}.jpg`);
-}
-
-let currentSlide = 0;
-
 document.addEventListener('DOMContentLoaded', () => {
-  const slideshowImg = document.getElementById('slideshow-img');
+  // Gardening Book Slideshow (Click to Advance)
+  const gardeningImages = [];
+  for (let i = 1; i <= 27; i++) {
+    gardeningImages.push(`img/gardeningbook${i}.jpg`);
+  }
+  let gardeningIndex = 0;
+  const gardeningImg = document.getElementById('slideshow-img');
 
-  if (slideshowImg) {
-    slideshowImg.addEventListener('click', () => {
-      currentSlide = (currentSlide + 1) % slideshowImages.length;
-      slideshowImg.src = slideshowImages[currentSlide];
+  if (gardeningImg) {
+    gardeningImg.addEventListener('click', () => {
+      gardeningIndex = (gardeningIndex + 1) % gardeningImages.length;
+      gardeningImg.src = gardeningImages[gardeningIndex];
     });
   }
-});
 
-// Diningshedslideshow
+  // Dining Shed Slideshow (Auto-Advance)
+  const diningImages = [];
+  for (let i = 2; i <= 26; i++) {
+    diningImages.push(`img/diningshed${i}.jpg`);
+  }
+  let diningIndex = 0;
+  const diningImg = document.getElementById('slideshow-img2');
 
-const slideshowImages2 = [
-  'img/diningshed2.jpg',
-  'img/diningshed3.jpg',
-  'img/diningshed4.jpg',
-  'img/diningshed5.jpg',
-  'img/diningshed6.jpg',
-  'img/diningshed7.jpg',
-  'img/diningshed8.jpg',
-  'img/diningshed9.jpg',
-  'img/diningshed10.jpg',
-  'img/diningshed11.jpg',
-  'img/diningshed12.jpg',
-  'img/diningshed13.jpg',
-  'img/diningshed14.jpg',
-  'img/diningshed15.jpg',
-  'img/diningshed16.jpg',
-  'img/diningshed17.jpg',
-  'img/diningshed18.jpg',
-  'img/diningshed19.jpg',
-  'img/diningshed20.jpg',
-  'img/diningshed21.jpg',
-  'img/diningshed22.jpg',
-  'img/diningshed23.jpg',
-  'img/diningshed24.jpg',
-  'img/diningshed25.jpg',
-  'img/diningshed26.jpg'
-  // Add more images as needed
-];
-let currentSlide2 = 0;
-const slideshowImg2 = document.getElementById('slideshow-img2');
+  if (diningImg) {
+    setInterval(() => {
+      diningIndex = (diningIndex + 1) % diningImages.length;
+      diningImg.src = diningImages[diningIndex];
+    }, 2000); // Change every 2 seconds
+  }
 
-if (slideshowImg2) {
-  slideshowImg2.addEventListener('click', () => {
-    currentSlide2 = (currentSlide2 + 1) % slideshowImages2.length;
-    slideshowImg2.src = slideshowImages2[currentSlide2];
+  // Gardening Tooltip
+  const slideshow1 = document.getElementById('slideshow');
+  const tooltip1 = document.getElementById('cursorTooltip');
+
+  slideshow1.addEventListener('mousemove', (e) => {
+    tooltip1.style.opacity = '1';
+    tooltip1.style.left = e.clientX + 15 + 'px';
+    tooltip1.style.top = e.clientY + 15 + 'px';
   });
-}
 
-// Gardeningbooktooltip
+  slideshow1.addEventListener('mouseleave', () => {
+    tooltip1.style.opacity = '0';
+  });
 
-const slideshow = document.getElementById('slideshow');
-const tooltip = document.getElementById('cursorTooltip');
+  // Dining Tooltip
+  // const slideshow2 = document.getElementById('slideshow2');
+  // const tooltip2 = document.getElementById('cursorTooltip2');
 
-slideshow.addEventListener('mousemove', (e) => {
-  tooltip.style.opacity = '1';
-  tooltip.style.left = e.clientX + 15 + 'px'; // 15px offset from cursor
-  tooltip.style.top = e.clientY + 15 + 'px';
-});
+  // slideshow2.addEventListener('mousemove', (e) => {
+  //   tooltip2.style.opacity = '1';
+  //   tooltip2.style.left = e.clientX + 15 + 'px';
+  //   tooltip2.style.top = e.clientY + 15 + 'px';
+  // });
 
-slideshow.addEventListener('mouseleave', () => {
-  tooltip.style.opacity = '0';
-});
-
-// tooltip2
-
-const slideshow2 = document.getElementById('slideshow2');
-const tooltip2 = document.getElementById('cursorTooltip2');
-
-slideshow2.addEventListener('mousemove', (e) => {
-  tooltip2.style.opacity = '1';
-  tooltip2.style.left = e.clientX + 15 + 'px';
-  tooltip2.style.top = e.clientY + 15 + 'px';
-});
-
-slideshow2.addEventListener('mouseleave', () => {
-  tooltip2.style.opacity = '0';
+  // slideshow2.addEventListener('mouseleave', () => {
+  //   tooltip2.style.opacity = '0';
+  // });
 });
