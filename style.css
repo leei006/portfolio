@@ -275,7 +275,7 @@
       padding: 40px;
       width: 100%;
       box-sizing: border-box;
-      margin-top: 2800px; /* Add margin-top to push it down */
+      margin-top: 30px; /* Add margin-top to push it down */
    }
    .image-container {
       width: 100vw;
