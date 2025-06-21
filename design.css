@@ -71,42 +71,41 @@ body {
 
 .project-row {
   display: flex;
-  flex-direction: row; /* horizontal always */
-  align-items: stretch; /* stretch children height */
+  flex-direction: row;
+  align-items: stretch;
   margin-bottom: 20px;
   width: 100%;
   max-width: 100vw;
-  gap: 0; /* no gap */
+  gap: 0;
 }
 
 .project-left,
 .project-right {
-  flex: 1 1 50%; /* equal width halves */
+  flex: 1 1 50%;
   display: flex;
-  flex-direction: column; /* stack inside vertically */
+  flex-direction: column;
   padding: 10px;
 }
 
-/* Make slideshow fill its container height */
 .project-left .slideshow {
   flex-grow: 1;
-  height: 450px; /* or whatever height you want */
+  height: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  cursor: e-resize;
+  position: relative; /* Needed for tooltip positioning */
 }
 
-/* Make description box fill its container height */
 .description-box {
   flex-grow: 1;
   padding: 20px;
   font-size: 13pt;
   color: black;
   line-height: 1.4;
-  background-color: #CCFF00;
+  background-color: #ccff00;
   border: solid 3px yellowgreen;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,34 +119,6 @@ body {
   object-fit: cover;
 }
 
-.tooltip-follow {
-  position: relative;
-}
-
-.cursor-tooltip {
-  position: fixed;
-  background-color: black;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 10pt;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.1s ease;
-  z-index: 9999;
-}
-
-#iframe-container {
-  width: 50%;
-  transition: width 0.3s ease, margin 0.3s ease;
-}
-
-.iframe-container iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
 #diningshedlink {
   color: yellowgreen;
 }
@@ -156,24 +127,38 @@ body {
   color: green;
 }
 
+/* Tooltip styling */
+.cursor-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background-color: black;
+  color: white;
+  font-size: 10pt;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  user-select: none;
+  transform: translate(10px, 20px);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
 
 @media screen and (max-width: 500px) {
   body {
     padding-left: 10px;
     padding-right: 10px;
   }
+
   .project-left,
   .project-right {
     padding: 5px;
   }
+
   .project-left .slideshow {
-    flex-grow: 1;
-    height: 150px; /* or whatever height you want */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    height: 150px;
   }
+
   .description-box {
     font-size: clamp(9pt, 4vw, 11pt);
     padding: 12px;

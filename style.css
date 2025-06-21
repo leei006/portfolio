@@ -1,328 +1,153 @@
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   font-family: 'Apple Garamond', sans-serif;
- }
- 
- body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
   margin: 0;
-  padding-top: 80px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Apple Garamond', sans-serif;
 }
 
- 
- .image-container {
-   width: 50vw; 
-   height: 90vh; 
-   padding: 5px;
-   background-color: transparent; 
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   overflow: hidden; 
- }
-
- .main-container {
-  display: flex;
-  width: 100vw;
-  height: calc(100vh - 80px); /* minus the fixed header */
+body {
+ display: flex;
+ flex-direction: column;
+ height: 100vh;
+ margin: 0;
+ padding-top: 80px;
 }
- #image {
-   width: 100%;
-   height: 100%; 
-   object-fit: cover; 
- }
+
+.image-container {
+ width: 50vw; 
+ height: 90vh; 
+ padding: 5px;
+ background-color: transparent; 
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ overflow: hidden; 
+ position: relative;
+ cursor: default; /* will be overridden by JS */
+}
+
+.main-container {
+ display: flex;
+ width: 100vw;
+ height: calc(100vh - 80px); /* minus the fixed header */
+}
+
+#image {
+ width: 100%;
+ height: 100%; 
+ object-fit: cover; 
+}
+
 .header-container {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   z-index: 100;
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ z-index: 100;
+ background-color: white;
 }
 
 .full-bar.name {
-   display: block;
-   width: 100%;
-   text-align: center;
-   text-decoration: none;
-   padding: 6px 0;
-   font-size: 14pt;
-   font-weight: bold;
-   color: black;
-   background-color: white;
-   /* border: 2px solid black; */
+ display: block;
+ width: 100%;
+ text-align: center;
+ text-decoration: none;
+ padding: 6px 0;
+ font-size: 14pt;
+ font-weight: bold;
+ color: black;
+ background-color: white;
 }
-
 
 .nav-bar {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   gap: 30px;
-   width: 100%;
-   text-align: center;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 30px;
+ width: 100%;
+ text-align: center;
 }
-
 
 .nav-link {
-   position: relative;
-   overflow: hidden;
-   text-decoration: none;
- }
- 
- .nav-link::after {
-   content: '';
-   position: absolute;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   height: 2px;
-   background-color: yellowgreen;
-   transform: scaleX(0);
-   transform-origin: left;
-   transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
- }
- 
- .nav-link:hover::after {
-   transform: scaleX(1);
- }
-
-.design {
-  color: black;
+ position: relative;
+ overflow: hidden;
+ text-decoration: none;
 }
 
-.photography {
-  
-   color: black;
+.nav-link::after {
+ content: '';
+ position: absolute;
+ left: 0;
+ bottom: 0;
+ width: 100%;
+ height: 2px;
+ background-color: yellowgreen;
+ transform: scaleX(0);
+ transform-origin: left;
+ transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-.email {
-   color: black;
+.nav-link:hover::after {
+ transform: scaleX(1);
 }
 
+.design,
+.photography,
+.email,
 .instagram {
-   color: black;
+ color: black;
 }
-
-
-
-
-/* --- WORK GRID --- */
-.work {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-   align-items: center; /* Align items by their bottoms */
-   gap: 20px;
-   padding: 40px;
-   width: 100%;
-   box-sizing: border-box;
-   margin-top: 10px; /* Add margin-top to push it down */
-}
-.designwork {
-  width: 50%;
-  transition: width 0.3s ease, margin 0.3s ease;
-}
-.designwork-img img {
-   width: 90%;
-   height: auto;
-   object-fit: contain;
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-}
-
-
-
-.work-img {
-   width: 100%;
-   margin-left: auto;
-   margin-right: auto;
-}
-
-.work-img img {
-   width: 80%;
-   height: auto;
-   object-fit: contain;
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-}
-
-
-
-/* ANIMATION FOR FADE-IN EFFECT */
-@keyframes fadeInUp {
-   from {
-     opacity: 0;
-     transform: translateY(20px);
-   }
-   to {
-     opacity: 1;
-     transform: translateY(0);
-   }
-}
-
-.work-img {
-   opacity: 0;
-   animation: fadeInUp 0.6s ease forwards;
-}
-
-/* Optional: stagger the animation */
-.work-img:nth-child(1) { animation-delay: 0.1s; }
-.work-img:nth-child(2) { animation-delay: 0.2s; }
-.work-img:nth-child(3) { animation-delay: 0.3s; }
-.work-img:nth-child(4) { animation-delay: 0.4s; }
-.work-img:nth-child(5) { animation-delay: 0.5s; }
-.work-img:nth-child(6) { animation-delay: 0.6s; }
-
 
 .slideshow {
-  padding: 5px;
-  width: 50vw;
-  height: 90vh; /* Match image-container height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  background-color: transparent;
+ padding: 5px;
+ width: 50vw;
+ height: 90vh; /* Match image-container height */
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ overflow: hidden;
+ background-color: transparent;
+ position: relative; /* For tooltip positioning */
+ cursor: default; /* default cursor until JS overrides */
 }
 
 .slideshow img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* or 'contain' if you prefer */
+ width: 100%;
+ height: 100%;
+ object-fit: cover; /* or 'contain' if you prefer */
 }
 
 .tooltip-follow {
-  position: relative;
+ position: relative;
 }
 
+/* Tooltip styling reused for both tooltips */
 .cursor-tooltip {
-  position: fixed;
-  background-color: black;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 10pt;
-  pointer-events: none; /* So it doesn't interfere with the hover */
-  opacity: 0;
-  transition: opacity 0.1s ease;
-  z-index: 9999;
+ position: fixed; /* fixed so it can follow cursor anywhere */
+ background-color: black;
+ color: white;
+ padding: 4px 8px;
+ border-radius: 4px;
+ font-size: 10pt;
+ pointer-events: none; /* so it doesn't block mouse events */
+ opacity: 0;
+ transition: opacity 0.1s ease;
+ z-index: 9999;
+ user-select: none;
+ white-space: nowrap;
 }
 
 /* --- MEDIA QUERIES --- */
 @media screen and (max-width: 1024px) {
-   .work {
-     padding: 80px 20px 20px;
-     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-   }
-
-   .header {
-     width: 100%;
-     padding: 0 10px;
-   }
+ /* your existing media queries */
 }
-
-#gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-  gap: 20px; /* spacing between images */
-  padding: 20px; /* optional padding around the gallery */
-}
-
-.gallery-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-.gallery-item {
-  /* your styles here */
-  padding: 5px;
-  /* example: width, margin, border, etc. */
-}
-
 
 @media screen and (max-width: 768px) {
-   body {
-      flex-direction: column;
-      align-items: stretch;
-      padding-top: 0;         
-      height: auto;            
-    }
-   header {
-     gap: 20px;
-     padding: 10px;
-     left: 50%;
-     transform: translateX(-50%);
-     width: auto;
-     flex-direction: column;
-   }
-
-   .bio {
-     width: 90%;
-     text-align: center;
-     white-space: normal;
-   }
-   .work {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      align-items: center; /* Align items by their bottoms */
-      gap: 20px;
-      padding: 40px;
-      width: 100%;
-      box-sizing: border-box;
-      margin-top: 30px; /* Add margin-top to push it down */
-   }
-   .image-container {
-      width: 100vw;
-      height: 400px; /* subtract header height */
-    }
-    .main-container {
-      margin-top: 70px;
-      flex-direction: column;
-      height: auto;  /* height adapts */
-    }
-    .iframe-container {
-      width: 100%;
-      height: 50vh; /* or a suitable height */
-      margin-bottom: 1rem;
-    }
-    .designwork {
-      width: 100%;
-      height: auto;
-      margin-bottom: 1rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* smaller grid items */
-      gap: 10px;
-    }
-    .slideshow {
-      width: 100vw;
-      height: auto; /* let it grow with image content or define a fixed height if needed */
-      margin: 0;
-    }
-  
-    .slideshow img {
-      width: 100vw;
-      height: auto;
-      object-fit: cover; /* or 'contain' depending on your design */
-      display: block;
-      padding: 5px;
-    }
-  }
-    #image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  
-    .bottom-content {
-      height: 50vh;
-      overflow: auto;
-      width: 100vw;
-    }
-  
-
+ body {
+   flex-direction: column;
+   align-items: stretch;
+   padding-top: 0;         
+   height: auto;            
+ }
+ /* Add any other responsive adjustments as needed */
+}
