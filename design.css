@@ -30,7 +30,7 @@ body {
   padding: 6px 0;
   font-size: 14pt;
   font-weight: bold;
-  color: yellowgreen;
+  color: black;
   background-color: white;
 }
 
@@ -59,7 +59,7 @@ body {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: yellowgreen;
+  background-color: black;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
@@ -102,10 +102,9 @@ body {
   flex-grow: 1;
   padding: 20px;
   font-size: 13pt;
-  color: black;
+  color: white;
   line-height: 1.4;
-  background-color: #ccff00;
-  border: solid 3px yellowgreen;
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,11 +119,11 @@ body {
 }
 
 #diningshedlink {
-  color: yellowgreen;
+  color: white;
 }
 
 #diningshedlink:hover {
-  color: green;
+  color: grey;
 }
 
 /* Tooltip styling */
