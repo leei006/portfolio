@@ -95,7 +95,7 @@ body {
   align-items: center;
   overflow: hidden;
   cursor: e-resize;
-  position: relative; /* Needed for tooltip positioning */
+  position: relative; 
 }
 
 .description-box {
