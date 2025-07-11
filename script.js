@@ -119,3 +119,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+//Designpage
+
+document.addEventListener('DOMContentLoaded', () => {
+  function setupClickthrough(slideshowId, imgId, imagePrefix, imageCount) {
+    const imageArray = [];
+    for (let i = 1; i <= imageCount; i++) {
+      imageArray.push(`${imagePrefix}${i}.jpg`);
+    }
+
+    const slideshow = document.getElementById(slideshowId);
+    const img = document.getElementById(imgId);
+    let currentIndex = 0;
+
+    if (slideshow && img) {
+      slideshow.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % imageArray.length;
+        img.src = imageArray[currentIndex];
+      });
+    }
+  }
+
+  setupClickthrough('slideshow', 'slideshow-img', 'img/gardeningbook', 5);
+  setupClickthrough('slideshow2', 'slideshow-img2', 'img/diningshed', 4);
+});
+
+const gallery = document.getElementById('gallery');
+for (let i = 1; i <= 29; i++) {
+  const div = document.createElement('div');
+  div.className = 'work-img';  // changed to match CSS selector
+  const img = document.createElement('img');
+  img.src = `img/collectionphotos${i}.jpg`;
+  img.alt = `Image ${i}`;
+  div.appendChild(img);
+  gallery.appendChild(div);
+}
+
+

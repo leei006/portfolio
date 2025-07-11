@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Pandemic Dining Sheds</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dining Sheds Post-Pandemic</title>
+  <link rel="stylesheet" href="photography.css" />
+  <link rel="icon" type="image/x-icon" href="img/favicon.png" />
+  <script src="script.js" defer></script>
+  <link href="https://fonts.cdnfonts.com/css/apple-garamond?styles=11172,11168,11169,11170,11171,11167" rel="stylesheet">
 </head>
-<body>
-    <div class="header-container">
-        <a class="full-bar name" href="index.html">Dining Sheds Post-Pandemic</a>
-  
-        <div class="nav-bar">
-           <a class="nav-link design" href="design.html">Design</a>
-           <a class="nav-link photography" href="photography.html">Photography</a>
-           <a class="nav-link email" href="mailto:izzylee7@icloud.com">Email</a>
-           <a class="nav-link instagram" href="https://www.instagram.com/iyl.ee_/" target="_blank">Instagram</a>
-        </div>
-     </div>
-     <div id="gallery"></div>
+<body class="dining-page">
+  <div class="header-container">
+    <a class="full-bar name" href="index.html">Isabel Yeajin Lee</a>
+    <div class="nav-bar">
+      <a class="nav-link design" href="design.html">Design</a>
+      <a class="nav-link photography" href="photography.html">Photography</a>
+      <a class="nav-link email" href="mailto:izzylee7@icloud.com">Email</a>
+      <a class="nav-link instagram" href="https://www.instagram.com/iyl.ee_/" target="_blank">Instagram</a>
+    </div>
+  </div>
 
-     <script>
-       const gallery = document.getElementById('gallery');
-       for (let i = 1; i <= 29; i++) {
-         const div = document.createElement('div');
-         div.className = 'gallery-item';  // changed class name here
-     
-         const img = document.createElement('img');
-         img.src = `img/collectionphotos${i}.jpg`;
-         img.alt = `Image ${i}`;
-     
-         div.appendChild(img);
-         gallery.appendChild(div);
-       }
-     </script>
+  <div class="work" id="gallery"></div>
 
+  <script>
+    const gallery = document.getElementById('gallery');
+    const totalImages = 29; // Adjust if needed
+
+    for (let i = 1; i <= totalImages; i++) {
+      const div = document.createElement('div');
+      div.className = 'work-img';
+
+      const img = document.createElement('img');
+      img.src = `img/collectionphotos${i}.jpg`;
+      img.alt = `Dining Shed ${i}`;
+
+      div.appendChild(img);
+      gallery.appendChild(div);
+    }
+  </script>
 </body>
 </html>
