@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = startIndex;
     const container = document.getElementById(slideshowId);
     const image = document.getElementById(imgId);
-    const tooltip = container.querySelector('.cursor-tooltip');
+    const tooltip = container?.querySelector('.cursor-tooltip');
 
     if (container && image && tooltip) {
       container.addEventListener('click', (e) => {
@@ -46,17 +46,48 @@ document.addEventListener('DOMContentLoaded', () => {
   setupClickthrough('slideshow3', 'slideshow-img3', 'img/groove', 1);
   setupClickthrough('slideshow4', 'slideshow-img4', 'img/destijl', 2); 
 
-  // Optional dynamic gallery section
+  // Load images dynamically based on page
   const gallery = document.getElementById('gallery');
   if (gallery) {
-    for (let i = 1; i <= 29; i++) {
-      const div = document.createElement('div');
-      div.className = 'work-img';
-      const img = document.createElement('img');
-      img.src = `img/collectionphotos${i}.jpg`;
-      img.alt = `Image ${i}`;
-      div.appendChild(img);
-      gallery.appendChild(div);
+    if (document.body.classList.contains('dining-page')) {
+      // Load dining shed photos
+      const totalImages = 29;
+      for (let i = 1; i <= totalImages; i++) {
+        const div = document.createElement('div');
+        div.className = 'work-img';
+        const img = document.createElement('img');
+        img.src = `img/collectionphotos${i}.jpg`;
+        img.alt = `Dining Shed ${i}`;
+        div.appendChild(img);
+        gallery.appendChild(div);
+      }
+    } else if (document.body.classList.contains('photography-page')) {
+      // Load homeshoot photos for photography page
+      const photos = [
+        'img/homeshoot5.jpg',
+        'img/homeshoot3.jpg',
+        'img/homeshoot2.jpg',
+        'img/2.jpg',
+        'img/1.jpg',
+        'img/homeshoot1.jpg',
+        'img/homeshoot4.jpg',
+        'img/3.jpg',
+        'img/4.jpg',
+        'img/5.jpg',
+        'img/6.jpg',
+        'img/7.jpg',
+
+        // add more if needed
+      ];
+      photos.forEach((src, i) => {
+        const div = document.createElement('div');
+        div.className = 'work-img';
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = `Photography ${i + 1}`;
+        div.appendChild(img);
+        gallery.appendChild(div);
+      });
     }
   }
 });

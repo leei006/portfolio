@@ -6,10 +6,10 @@
 }
 
 body {
-  background-color: #EAF37A;
-  display: flex;
-  flex-direction: column;
   overflow-x: hidden;
+  overflow-y: auto;
+  height: 100vh;
+  background-color: #EAF37A;
 }
 
 .header-container {
@@ -64,34 +64,50 @@ body {
   color: black;
 }
 
-h2 {
-  color: #b6c301;
-  text-align: left;
-  margin-left: 40px;
-  margin-right: 40px;
-}
-
-/* Main vertical scroll layout */
 #gallery {
-  margin-top: 20px; /* makes room for fixed header */
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px; /* small gap between images */
+  gap: 12px;
   padding: 20px;
 }
 
-/* Each image wrapper */
 .work-img {
   width: 100%;
-  max-width: 800px; /* optional: limits width for better layout */
+  max-width: 800px;
 }
 
 .work-img img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 6px; /* optional: soft edges */
+  border-radius: 6px;
+}
+
+.photography-page #gallery {
+  max-width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 12px;
+}
+
+.photography-page .work-img {
+  max-width: none;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.photography-page .work-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .project-grid {
@@ -135,21 +151,19 @@ h2 {
 }
 
 .h1-wrapper {
-  width: 100vw;
+  width: 100%;
   border-top: 1.5px solid black;
   border-bottom: 1.5px solid black;
-  padding: 20px 0;
-  margin-left: calc(-50vw + 50%);
+  padding: 20px 40px;
+  box-sizing: border-box;
+  margin-left: 0;
 }
 
 .h1-wrapper h1 {
-  font-size: 24pt;
-  font-weight: normal;
+  margin-left: 0;
+  margin-right: 0;
   color: #b6c301;
-  margin: 0;
-  text-align: left;
-  width: 100%;
-  margin-left: 40px;
+  width: auto;
 }
 
 .intro-text p {
@@ -161,6 +175,7 @@ h2 {
   margin-bottom: 0;
   padding-bottom: 0;
 }
+
 .circle {
   position: absolute;
   top: 40px;
@@ -171,6 +186,15 @@ h2 {
   border-radius: 50%;
   z-index: 101;
 }
+
+.photography-page .work-img {
+  max-width: 500px;
+}
+
+.photography-page .work-img img {
+  border-radius: 4px;
+}
+
 @media screen and (max-width: 1024px) {
 }
 

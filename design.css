@@ -70,6 +70,7 @@ body {
   flex-direction: column;
   height: auto;
   border: 1.5px dotted black;
+  background-color: #b6c301;
   border-radius: 10px;
   overflow: hidden;
   padding: 10px;
