@@ -60,7 +60,7 @@ body {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 50px;
+  gap: 20px;
   padding: 40px 20px;
   align-items: start;
 }
@@ -70,7 +70,7 @@ body {
   flex-direction: column;
   height: auto;
   border: 1.5px dotted black;
-  background-color: #b6c301;
+  background-color: #c4d201de;
   border-radius: 10px;
   overflow: hidden;
   padding: 10px;

@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize all slideshows
   setupClickthrough('slideshow', 'slideshow-img', 'img/gardeningbook', 27);
   setupClickthrough('slideshow2', 'slideshow-img2', 'img/diningshed', 26);
-  setupClickthrough('slideshow3', 'slideshow-img3', 'img/groove', 1);
+  setupClickthrough('slideshow3', 'slideshow-img3', 'img/groove', 2);
   setupClickthrough('slideshow4', 'slideshow-img4', 'img/destijl', 3); 
   setupClickthrough('slideshow5', 'slideshow-img5', 'img/dogcarecampaign', 1); 
 
