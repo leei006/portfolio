@@ -228,4 +228,22 @@ body {
     flex: 0 1 100%;
     max-width: 100%;
   }
+  .circle {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    background-color: orangered;
+    border-radius: 50%;
+    z-index: 101;
+  }
+  .nav-bar {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    text-align: left;
+    font-size: 12pt;
+    margin-left: 40px;
+  }
 }
