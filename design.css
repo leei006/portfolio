@@ -178,6 +178,10 @@ body {
     height: auto;
   }
 
+  .full-bar.name {
+    font-size: 18pt;
+   }
+
   .project-info {
     font-size: 11pt;
     padding: 14px;

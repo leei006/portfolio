@@ -228,6 +228,10 @@ body {
     flex: 0 1 100%;
     max-width: 100%;
   }
+
+  .full-bar.name {
+    font-size: 18pt;
+   }
   .circle {
     position: absolute;
     top: 25px;
