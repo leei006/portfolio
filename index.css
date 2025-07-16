@@ -23,7 +23,7 @@ body {
 }
 
 .full-bar.name {
-  margin-left: 40px;
+  margin-left: 20px;
   display: block;
   width: 100%;
   text-align: left;
@@ -43,7 +43,9 @@ body {
   margin-top: 5px;
   font-size: 14pt;
   margin-bottom: 10px;
-  margin-left: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 0;
 }
 
 .nav-link {
@@ -72,11 +74,10 @@ body {
 }
 
 .h1-wrapper {
-  width: 100vw;
+  width: 100%;
   border-top: 1.5px solid black;
   border-bottom: 1.5px solid black;
   padding: 20px 0;
-  margin-left: calc(-50vw + 50%);
 }
 
 .h1-wrapper h1 {
@@ -86,7 +87,9 @@ body {
   margin: 0;
   text-align: left;
   width: 100%;
-  margin-left: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 0;
 }
 
 .intro-text p {
@@ -113,6 +116,12 @@ body {
   display: block;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
 .landing-content {
   width: 100%;
   max-width: 1200px;
@@ -130,6 +139,7 @@ body {
 
 
 .project-tile {
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   border: 1.5px dotted black;
@@ -180,7 +190,6 @@ body {
     width: 100%;
     text-align: left;
     font-size: 12pt;
-    margin-left: 40px;
   }
   .h1-wrapper {
     width: 100vw;
@@ -190,13 +199,12 @@ body {
     margin-left: calc(-50vw + 50%);
   }  
   .h1-wrapper h1 {
-    font-size: 18pt;
+    font-size: 12pt;
     font-weight: normal;
-    color: black;
-    margin: 0;
+    color: #b6c301;
     text-align: left;
-    width: 100%;
-    margin-left: 40px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .project-grid {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
