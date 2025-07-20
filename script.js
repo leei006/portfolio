@@ -1,94 +1,219 @@
-document.addEventListener('DOMContentLoaded', () => {
-  function setupClickthrough(slideshowId, imgId, imagePrefix, imageCount, startIndex = 0) {
-    const imageArray = [];
-    for (let i = 1; i <= imageCount; i++) {
-      imageArray.push(`${imagePrefix}${i}.jpg`);
+const photo = [
+    {
+        "id": 1,
+        "title": "De Stijl",
+        "year": 2023,
+        "medium": "Typographic print in color on copy paper.",
+        "img":["img/destijl3.jpg", "img/destijl1.jpg", "img/destijl2.jpg"]
+    },
+    {
+       "id": 2,
+       "title": "Dining Shed Collection",
+       "year": 2024,
+       "medium": "City collection of pandemic dining sheds.",
+       "img": [ "img/collectionphotos1.jpg",
+       "img/collectionphotos2.jpg",
+       "img/collectionphotos3.jpg",
+       "img/collectionphotos4.jpg",
+       "img/collectionphotos5.jpg",
+       "img/collectionphotos6.jpg",
+       "img/collectionphotos7.jpg",
+       "img/collectionphotos8.jpg",
+       "img/collectionphotos9.jpg",
+       "img/collectionphotos10.jpg",
+       "img/collectionphotos11.jpg",
+       "img/collectionphotos12.jpg",
+       "img/collectionphotos13.jpg",
+       "img/collectionphotos14.jpg",
+       "img/collectionphotos15.jpg",
+       "img/collectionphotos16.jpg",
+       "img/collectionphotos17.jpg",
+       "img/collectionphotos18.jpg",
+       "img/collectionphotos19.jpg",
+       "img/collectionphotos20.jpg",
+       "img/collectionphotos21.jpg",
+       "img/collectionphotos22.jpg",
+       "img/collectionphotos23.jpg",
+       "img/collectionphotos24.jpg",
+       "img/collectionphotos25.jpg",
+       "img/collectionphotos26.jpg",
+       "img/collectionphotos27.jpg",
+       "img/collectionphotos28.jpg",
+       "img/collectionphotos29.jpg"]
+    },
+    {
+        "id": 3,
+        "title": "Gardening Book",
+        "year": 2025,
+        "medium": "Illustrations and found text in a 3.25 x 4.5 inch saddle stitch book.",
+        "img":["img/gardeningbook8.jpg",
+        "img/gardeningbook9.jpg",
+        "img/gardeningbook10.jpg",
+        "img/gardeningbook11.jpg",
+        "img/gardeningbook12.jpg",
+        "img/gardeningbook13.jpg",
+        "img/gardeningbook14.jpg",
+        "img/gardeningbook15.jpg",
+        "img/gardeningbook16.jpg",
+        "img/gardeningbook17.jpg",
+        "img/gardeningbook18.jpg",
+        "img/gardeningbook19.jpg",
+        "img/gardeningbook20.jpg",
+        "img/gardeningbook21.jpg",
+        "img/gardeningbook22.jpg",
+        "img/gardeningbook23.jpg",
+        "img/gardeningbook24.jpg",
+        "img/gardeningbook25.jpg",
+        "img/gardeningbook26.jpg",
+        "img/gardeningbook27.jpg"]
+    },
+    
+    {
+        "id": 4,
+        "title": "San Francisco",
+        "year": 2025,
+        "medium": "Photography. San Francisco Bay",
+        "img": ["img/homeshoot1.jpg", "img/homeshoot2.jpg", "img/homeshoot3.jpg","img/homeshoot4.jpg","img/homeshoot5.jpg"]
+    },
+    {
+        "id": 5,
+        "title": "Dining Shed Book",
+        "year": 2024,
+        "medium": "Perfect bound color printed book documenting pandemic dining sheds.",
+        "img":["img/diningshed1.jpg",
+        "img/diningshed2.jpg",
+        "img/diningshed3.jpg",
+        "img/diningshed4.jpg",
+        "img/diningshed5.jpg",
+        "img/diningshed6.jpg",
+        "img/diningshed7.jpg",
+        "img/diningshed8.jpg",
+        "img/diningshed9.jpg",
+        "img/diningshed10.jpg",
+        "img/diningshed11.jpg",
+        "img/diningshed12.jpg",
+        "img/diningshed13.jpg",
+        "img/diningshed14.jpg",
+        "img/diningshed15.jpg",
+        "img/diningshed16.jpg",
+        "img/diningshed17.jpg",
+        "img/diningshed18.jpg",
+        "img/diningshed19.jpg",
+        "img/diningshed20.jpg",
+        "img/diningshed21.jpg",
+        "img/diningshed22.jpg",
+        "img/diningshed23.jpg",
+        "img/diningshed24.jpg",
+        "img/diningshed25.jpg",
+        "img/diningshed26.jpg"]
+    },
+    {
+        "id": 6,
+        "title": "Vegetable",
+        "year": 2025,
+        "medium": "Photography. La Plaza, New York",
+        "img": ["img/6.jpg", "img/7.jpg"]
+    },
+    {
+        "id": 7,
+        "title": "Groove",
+        "year": 2024,
+        "medium": "Typeface Design. Inspired by shapes defining the 1960's.",
+        "img":["img/groove1.jpg", "img/groove2.jpg"]
+    },
+    {
+      "id": 8,
+        "title": "Illustrations",
+        "year": 2025,
+        "medium": "Drawings of food and other things.",
+        "img": ["img/dogcarecampaign.jpg", "img/dececco.jpg", "img/berries.jpg"]
+    },
+    {
+        "id": 9,
+        "title": "Food",
+        "year": 2024,
+        "medium": "Photography. Food styling.",
+        "img": ["img/1.jpg", "img/4.jpg"]
     }
+]
 
-    let currentIndex = startIndex;
-    const container = document.getElementById(slideshowId);
-    const image = document.getElementById(imgId);
-    const tooltip = container?.querySelector('.cursor-tooltip');
+// work function
+const workContainer = document.getElementById("work-container");
 
-    if (container && image && tooltip) {
-      container.addEventListener('click', (e) => {
-        const rect = container.getBoundingClientRect();
-        const isRightSide = e.clientX > rect.left + rect.width / 2;
-
-        if (isRightSide) {
-          currentIndex = (currentIndex + 1) % imageArray.length;
-        } else {
-          currentIndex = (currentIndex - 1 + imageArray.length) % imageArray.length;
-        }
-
-        image.src = imageArray[currentIndex];
-      });
-
-      container.addEventListener('mousemove', (e) => {
-        const rect = container.getBoundingClientRect();
-        const isRightSide = e.clientX > rect.left + rect.width / 2;
-        container.style.cursor = isRightSide ? 'e-resize' : 'w-resize';
-
-        tooltip.style.opacity = '1';
-        tooltip.style.left = (e.clientX - rect.left + 10) + 'px';
-        tooltip.style.top = (e.clientY - rect.top + 20) + 'px';
-      });
-
-      container.addEventListener('mouseleave', () => {
-        tooltip.style.opacity = '0';
-      });
-    }
+photo.forEach((item, index) => {
+  // Insert an <hr> separator before every item except the first
+  if (index !== 0) {
+    const hr = document.createElement("hr");
+    hr.classList.add("work-separator");
+    workContainer.appendChild(hr);
   }
 
-  // Initialize all slideshows
-  setupClickthrough('slideshow', 'slideshow-img', 'img/gardeningbook', 27);
-  setupClickthrough('slideshow2', 'slideshow-img2', 'img/diningshed', 26);
-  setupClickthrough('slideshow3', 'slideshow-img3', 'img/groove', 2);
-  setupClickthrough('slideshow4', 'slideshow-img4', 'img/destijl', 3); 
-  setupClickthrough('slideshow5', 'slideshow-img5', 'img/dogcarecampaign', 1); 
+  const workItem = document.createElement("div");
+  workItem.classList.add("work-item");
 
-  // Load images dynamically based on page
-  const gallery = document.getElementById('gallery');
-  if (gallery) {
-    if (document.body.classList.contains('dining-page')) {
-      // Load dining shed photos
-      const totalImages = 29;
-      for (let i = 1; i <= totalImages; i++) {
-        const div = document.createElement('div');
-        div.className = 'work-img';
-        const img = document.createElement('img');
-        img.src = `img/collectionphotos${i}.jpg`;
-        img.alt = `Dining Shed ${i}`;
-        div.appendChild(img);
-        gallery.appendChild(div);
-      }
-    } else if (document.body.classList.contains('photography-page')) {
-      // Load homeshoot photos for photography page
-      const photos = [
-        'img/homeshoot5.jpg',
-        'img/homeshoot3.jpg',
-        'img/homeshoot2.jpg',
-        'img/2.jpg',
-        'img/1.jpg',
-        'img/homeshoot1.jpg',
-        'img/homeshoot4.jpg',
-        'img/3.jpg',
-        'img/4.jpg',
-        'img/5.jpg',
-        'img/6.jpg',
-        'img/7.jpg',
+  // Image wrapper
+  const imageWrapper = document.createElement("div");
+  imageWrapper.classList.add("work-image");
 
-        // add more if needed
-      ];
-      photos.forEach((src, i) => {
-        const div = document.createElement('div');
-        div.className = 'work-img';
-        const img = document.createElement('img');
-        img.src = src;
-        img.alt = `Photography ${i + 1}`;
-        div.appendChild(img);
-        gallery.appendChild(div);
-      });
-    }
+  const slideshowContainer = document.createElement("div");
+  slideshowContainer.classList.add("slideshow-container");
+
+  const imgElement = document.createElement("img");
+  imgElement.src = item.img[0];
+  imgElement.alt = item.title;
+  slideshowContainer.appendChild(imgElement);
+
+  // If multiple images: add slideshow logic
+  if (item.img.length > 1) {
+    let currentIndex = 0;
+
+    const leftZone = document.createElement("div");
+    leftZone.classList.add("slideshow-left");
+
+    const rightZone = document.createElement("div");
+    rightZone.classList.add("slideshow-right");
+
+    leftZone.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + item.img.length) % item.img.length;
+      imgElement.src = item.img[currentIndex];
+    });
+
+    rightZone.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % item.img.length;
+      imgElement.src = item.img[currentIndex];
+    });
+
+    slideshowContainer.appendChild(leftZone);
+    slideshowContainer.appendChild(rightZone);
   }
+
+  imageWrapper.appendChild(slideshowContainer);
+
+  // Info section
+    const info = document.createElement("div");
+    info.classList.add("work-info");
+  
+    const title = document.createElement("div");
+    title.classList.add("work-title");
+    title.textContent = item.title;
+  
+    const year = document.createElement("div");
+    year.classList.add("work-year");
+    year.textContent = item.year;
+  
+    const medium = document.createElement("div");
+    medium.classList.add("work-medium");
+    medium.textContent = item.medium;
+  
+    info.appendChild(year);
+    info.appendChild(title);
+    info.appendChild(medium);
+  
+
+  
+  // Combine and insert
+  workItem.appendChild(imageWrapper);
+  workItem.appendChild(info);
+  workContainer.appendChild(workItem);
 });
+
