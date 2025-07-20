@@ -106,7 +106,7 @@ a:hover {
 .work-info {
   width: 50%;
   position: relative;
-  left: -5%;
+  left: 0%;
   text-align: left;
   display: flex;
   flex-direction: column;
