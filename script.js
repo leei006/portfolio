@@ -7,6 +7,13 @@ const photo = [
         "img":["img/destijl3.jpg", "img/destijl1.jpg", "img/destijl2.jpg"]
     },
     {
+      "id": 7,
+      "title": "Groove",
+      "year": 2024,
+      "medium": "Typeface Design. Inspired by shapes defining the 1960's.",
+      "img":["img/groove1.png"]
+  },
+    {
        "id": 2,
        "title": "Dining Shed Collection",
        "year": 2024,
@@ -114,13 +121,7 @@ const photo = [
         "medium": "Photography. La Plaza, New York",
         "img": ["img/6.jpg", "img/7.jpg"]
     },
-    {
-        "id": 7,
-        "title": "Groove",
-        "year": 2024,
-        "medium": "Typeface Design. Inspired by shapes defining the 1960's.",
-        "img":["img/groove1.jpg", "img/groove2.jpg"]
-    },
+
     {
       "id": 8,
         "title": "Illustrations",
