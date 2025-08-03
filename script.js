@@ -124,10 +124,10 @@ const photo = [
 
     {
       "id": 8,
-        "title": "Illustrations",
+        "title": "Illustrator Graphics",
         "year": 2025,
-        "medium": "Drawings of food and other things.",
-        "img": ["img/dogcarecampaign.jpg", "img/dececco.jpg", "img/berries.jpg"]
+        "medium": "Visualizing food through digital forms.",
+        "img": ["img/friedchicken.jpeg"]
     },
     {
         "id": 9,
