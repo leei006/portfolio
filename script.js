@@ -1,4 +1,11 @@
 const photo = [
+  {
+    "id": 10,
+    "title": "Park Benches",
+    "year": 2024,
+    "medium": "Photography",
+    "img":["img/bench2.jpg", "img/bench3.jpg", "img/bench4.jpg", "img/bench6.jpg", "img/bench7.jpg", "img/bench8.jpg", "img/bench9.jpg", "img/bench11.jpg", "img/bench12.jpg",]
+},
     {
         "id": 1,
         "title": "De Stijl",
@@ -135,7 +142,7 @@ const photo = [
         "year": 2024,
         "medium": "Photography. Food styling.",
         "img": ["img/1.jpg", "img/4.jpg"]
-    }
+    },
 ]
 
 // work function
