@@ -129,13 +129,13 @@ const photo = [
         "img": ["img/6.jpg", "img/7.jpg"]
     },
 
-    {
-      "id": 8,
-        "title": "Illustrator Graphics",
-        "year": 2025,
-        "medium": "Visualizing food through digital forms.",
-        "img": ["img/friedchicken.jpeg"]
-    },
+    // {
+    //   "id": 8,
+    //     "title": "Illustrator Graphics",
+    //     "year": 2025,
+    //     "medium": "Visualizing food through digital forms.",
+    //     "img": ["img/friedchicken.jpeg"]
+    // },
     {
         "id": 9,
         "title": "Food",
