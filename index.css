@@ -116,10 +116,21 @@ a:hover {
 
 /* Image container */
 .slideshow-container {
+  height: 400px;       
+  width: auto;       
   position: relative;
-  width: 100%;
-  height: auto;
-  cursor: default;
+  overflow: hidden;
+  display: flex;     
+  justify-content: left;
+  align-items: left;
+}
+
+.slideshow-container img,
+.slideshow-container video {
+  height: 100%;        
+  width: auto;        
+  object-fit: cover;  
+  display: block;
 }
 
 /* Left and right hover zones */
