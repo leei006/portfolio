@@ -10,7 +10,7 @@ body {
   font-size: 24px;
   line-height: 32px;
   font-family: "area-normal", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   overflow: hidden;
   scrollbar-color: var(--orange) var(--grey);
@@ -82,7 +82,7 @@ a:hover {
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  gap: 30px;
+  gap: 10px;
   padding-bottom: 10px;
 }
 
@@ -94,7 +94,7 @@ a:hover {
 }
 
 .work-image {
-  width: 45%;
+  width: 100%;
   max-width: 600px;
 }
 
@@ -107,7 +107,7 @@ a:hover {
 .work-info {
   width: 50%;
   position: relative;
-  left: 0%;
+  left: 5%;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -116,8 +116,8 @@ a:hover {
 
 /* Image container */
 .slideshow-container {
-  height: 400px;       
-  width: auto;       
+  height: 350px;       
+  width: 640px;       
   position: relative;
   overflow: hidden;
   display: flex;     
@@ -127,9 +127,9 @@ a:hover {
 
 .slideshow-container img,
 .slideshow-container video {
-  height: 100%;        
-  width: auto;        
-  object-fit: cover;  
+  height: auto;       
+  width: 100%;        
+  object-fit: contain;  
   display: block;
 }
 
@@ -170,30 +170,33 @@ footer{
   bottom: 0;
 }
 
-@media (max-width: 768px) {
-  
+@media (max-width: 1200px) {
   body {
     font-size: 16px;
     line-height: 24px;
     overflow-x: hidden;
     overflow-y: auto;
   }
+
   .bio {
     left: 10px;
     top: 10%;
     z-index: 10000;
     width: 90%;
   }
-.logo {
-  margin-left: 10px;
-}
+
+  .logo {
+    margin-left: 10px;
+  }
+
   .split {
     position: relative;
     height: auto;
     padding: 20px 10px;
   }
 
-  .left, .right {
+  .left,
+  .right {
     width: 100%;
     position: relative;
     border: none;
@@ -211,28 +214,70 @@ footer{
   }
 
   .work-container {
-    padding: 10px;
+    margin-top: 8px; 
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 2%;
   }
+
+  .work-image {
+    width: 100%;
+    max-width: 700px;
+  }
+  
+  .work-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
 
   .work-item {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;     /* changed from flex-start */
     margin-left: auto;
     margin-right: auto;
   }
- a {
-  margin-left: 10px;
- }
+
+  a {
+    margin-left: 10px;
+  }
+
   .work-image,
   .work-info {
     width: 100%;
+
   }
+
   .work-info {
     margin-top: 12px;
+    text-align: center;   
+    left: 0;              
   }
+
   .work-separator {
     width: 95%;
     left: 0;
+  }
+
+  .slideshow-container {
+    width: 100%;        
+    max-width: 700px;    
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;   /* keeps slideshow centered */
+  }
+
+  .slideshow-container img,
+  .slideshow-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   footer {
