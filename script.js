@@ -7,11 +7,13 @@ const photo = [
     "img": ["img/iteminhand.jpg", "video/iteminhand2.mp4"]
   },
   {
-    "id": 10,
-    "title": "Park Benches",
+    "id": 2,
+    "title": "Dining Shed Collection",
     "year": 2024,
-    "medium": "Photography",
-    "img":["img/bench2.jpg", "img/bench3.jpg", "img/bench4.jpg", "img/bench6.jpg", "img/bench7.jpg", "img/bench8.jpg", "img/bench9.jpg", "img/bench11.jpg", "img/bench12.jpg"]
+    "medium": "City collection of pandemic dining sheds.",
+    "img": [
+      "img/collectionphotos3.jpg","img/collectionphotos1.jpg","img/collectionphotos2.jpg","img/collectionphotos4.jpg","img/collectionphotos5.jpg","img/collectionphotos6.jpg","img/collectionphotos7.jpg","img/collectionphotos8.jpg","img/collectionphotos9.jpg","img/collectionphotos10.jpg","img/collectionphotos11.jpg","img/collectionphotos12.jpg","img/collectionphotos13.jpg","img/collectionphotos14.jpg","img/collectionphotos15.jpg","img/collectionphotos16.jpg","img/collectionphotos17.jpg","img/collectionphotos18.jpg","img/collectionphotos19.jpg","img/collectionphotos20.jpg","img/collectionphotos21.jpg","img/collectionphotos22.jpg","img/collectionphotos23.jpg","img/collectionphotos24.jpg","img/collectionphotos25.jpg","img/collectionphotos26.jpg","img/collectionphotos27.jpg","img/collectionphotos28.jpg","img/collectionphotos29.jpg"
+    ]
   },
   {
     "id": 12,
@@ -34,6 +36,14 @@ const photo = [
     ]
   },
   {
+    "id": 10,
+    "title": "Park Benches",
+    "year": 2024,
+    "medium": "Photography",
+    "img":["img/bench2.jpg", "img/bench3.jpg", "img/bench4.jpg", "img/bench6.jpg", "img/bench7.jpg", "img/bench8.jpg", "img/bench9.jpg", "img/bench11.jpg", "img/bench12.jpg"]
+  },
+  
+  {
     "id": 1,
     "title": "De Stijl",
     "year": 2023,
@@ -48,15 +58,7 @@ const photo = [
   //   "medium": "Typeface Design. Inspired by shapes defining the 1960's.",
   //   "img":["img/groove1.png"]
   // },
-  {
-    "id": 2,
-    "title": "Dining Shed Collection",
-    "year": 2024,
-    "medium": "City collection of pandemic dining sheds.",
-    "img": [
-      "img/collectionphotos3.jpg","img/collectionphotos1.jpg","img/collectionphotos2.jpg","img/collectionphotos4.jpg","img/collectionphotos5.jpg","img/collectionphotos6.jpg","img/collectionphotos7.jpg","img/collectionphotos8.jpg","img/collectionphotos9.jpg","img/collectionphotos10.jpg","img/collectionphotos11.jpg","img/collectionphotos12.jpg","img/collectionphotos13.jpg","img/collectionphotos14.jpg","img/collectionphotos15.jpg","img/collectionphotos16.jpg","img/collectionphotos17.jpg","img/collectionphotos18.jpg","img/collectionphotos19.jpg","img/collectionphotos20.jpg","img/collectionphotos21.jpg","img/collectionphotos22.jpg","img/collectionphotos23.jpg","img/collectionphotos24.jpg","img/collectionphotos25.jpg","img/collectionphotos26.jpg","img/collectionphotos27.jpg","img/collectionphotos28.jpg","img/collectionphotos29.jpg"
-    ]
-  },
+  
   {
     "id": 3,
     "title": "Gardening Book",

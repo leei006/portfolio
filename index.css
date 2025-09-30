@@ -116,21 +116,26 @@ a:hover {
 
 /* Image container */
 .slideshow-container {
-  height: 350px;       
-  width: 640px;       
+  width: 100%;
+  max-width: 900px;
+  height: 400px; /* fixed height keeps it stable */
   position: relative;
   overflow: hidden;
-  display: flex;     
-  justify-content: left;
-  align-items: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slideshow-container img,
 .slideshow-container video {
-  height: auto;       
-  width: 100%;        
-  object-fit: contain;  
-  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* no jump */
+}
+
+.slideshow-container img.loaded,
+.slideshow-container video.loaded {
+  opacity: 1; /* fade in once loaded */
 }
 
 /* Left and right hover zones */
@@ -230,7 +235,8 @@ footer{
   .work-image img {
     width: 100%;
     height: auto;
-    display: block;
+    max-height: 500px; 
+    object-fit: contain;
   }
 
 
@@ -263,21 +269,21 @@ footer{
   }
 
   .slideshow-container {
-    width: 100%;        
-    max-width: 700px;    
-    height: auto;
+    width: 100%;       
+    max-width: 600px;  
+    height: auto;     
+    position: relative;
+    overflow: hidden;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;   /* keeps slideshow centered */
+    justify-content: flex-start;
+    align-items: flex-start;
   }
-
   .slideshow-container img,
   .slideshow-container video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%;  
+    height: auto; 
+    object-fit: contain; 
+    display: block;
   }
 
   footer {
