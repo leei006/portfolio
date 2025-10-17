@@ -188,8 +188,8 @@ photo.forEach((item, index) => {
   medium.classList.add("work-medium");
   medium.textContent = item.medium;
 
-  info.appendChild(year);
   info.appendChild(title);
+  info.appendChild(year);
   info.appendChild(medium);
 
   workItem.appendChild(imageWrapper);
