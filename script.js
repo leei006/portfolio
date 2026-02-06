@@ -1,12 +1,12 @@
 const photo = [
 
-  {
-    "id": 13,
-    "title": "Yoga in La Plaza Cultural",
-    "year": 2025,
-    "medium": "Photography",
-    "img": ["img/laplazacultural2.jpg","img/laplazacultural3.jpg", "img/laplazacultural1.JPG", ]
-  },
+  // {
+  //   "id": 13,
+  //   "title": "Yoga in La Plaza Cultural",
+  //   "year": 2025,
+  //   "medium": "Photography",
+  //   "img": ["img/laplazacultural2.jpg","img/laplazacultural3.jpg", "img/laplazacultural1.JPG", ]
+  // },
   {
     "id": 14,
     "title": "Radishes",
