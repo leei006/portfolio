@@ -1,26 +1,4 @@
 const photo = [
-
-  // {
-  //   "id": 13,
-  //   "title": "Yoga in La Plaza Cultural",
-  //   "year": 2025,
-  //   "medium": "Photography",
-  //   "img": ["img/laplazacultural2.jpg","img/laplazacultural3.jpg", "img/laplazacultural1.JPG", ]
-  // },
-  {
-    "id": 14,
-    "title": "Radishes",
-    "year": 2025,
-    "medium": "Photography",
-    "img": ["img/radish1.jpg","img/radish2.jpg",]
-  },
-  {
-    "id": 11,
-    "title": "Item In Hand",
-    "year": 2025,
-    "medium": "Graphic Design",
-    "img": ["img/iteminhand.jpg", "video/iteminhand2.mp4"]
-  },
   {
     "id": 2,
     "title": "Dining Shed Collection",
@@ -51,6 +29,21 @@ const photo = [
     ]
   },
   {
+    "id": 14,
+    "title": "Radishes",
+    "year": 2025,
+    "medium": "Photography",
+    "img": ["img/radish1.jpg","img/radish2.jpg",]
+  },
+  {
+    "id": 11,
+    "title": "Item In Hand",
+    "year": 2025,
+    "medium": "Graphic Design",
+    "img": ["img/iteminhand.jpg", "video/iteminhand2.mp4"]
+  },
+  
+  {
     "id": 10,
     "title": "Park Benches",
     "year": 2024,
@@ -65,14 +58,6 @@ const photo = [
     "medium": "Typographic print in color on copy paper.",
     "img":["img/vilmos1.jpg", "img/vilmos2.jpg", "img/vilmos3.jpg"]
   },
-
-  // {
-  //   "id": 7,
-  //   "title": "Groove",
-  //   "year": 2024,
-  //   "medium": "Typeface Design. Inspired by shapes defining the 1960's.",
-  //   "img":["img/groove1.png"]
-  // },
   
   {
     "id": 3,
@@ -88,20 +73,6 @@ const photo = [
     "medium": "Photography. San Francisco Bay",
     "img": ["img/homeshoot1.jpg", "img/homeshoot2.jpg", "img/homeshoot3.jpg","img/homeshoot4.jpg","img/homeshoot5.jpg"]
   },
-  // {
-  //   "id": 5,
-  //   "title": "Dining Shed Book",
-  //   "year": 2024,
-  //   "medium": "Perfect bound color printed book documenting pandemic dining sheds.",
-  //   "img":["img/diningshed1.jpg","img/diningshed2.jpg","img/diningshed3.jpg","img/diningshed4.jpg","img/diningshed5.jpg","img/diningshed6.jpg","img/diningshed7.jpg","img/diningshed8.jpg","img/diningshed9.jpg","img/diningshed10.jpg","img/diningshed11.jpg","img/diningshed12.jpg","img/diningshed13.jpg","img/diningshed14.jpg","img/diningshed15.jpg","img/diningshed16.jpg","img/diningshed17.jpg","img/diningshed18.jpg","img/diningshed19.jpg","img/diningshed20.jpg","img/diningshed21.jpg","img/diningshed22.jpg","img/diningshed23.jpg","img/diningshed24.jpg","img/diningshed25.jpg","img/diningshed26.jpg"]
-  // },
-  // {
-  //   "id": 6,
-  //   "title": "Vegetable",
-  //   "year": 2025,
-  //   "medium": "Photography. La Plaza, New York",
-  //   "img": ["img/6.jpg", "img/7.jpg"]
-  // },
   {
     "id": 9,
     "title": "Food",
