@@ -40,7 +40,7 @@ const photo = [
     "title": "Item In Hand",
     "year": 2025,
     "medium": "Graphic Design",
-    "img": ["img/iteminhand.jpg", "video/iteminhand2.mp4"]
+    "img": ["img/iteminhand.jpg"]
   },
   {
     "id": 10,
