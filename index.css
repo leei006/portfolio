@@ -59,12 +59,16 @@ h1, h2, h3 {
 
 /* CAPTIONS */
 .content .caption {
-  width: 70%;
-  max-width: 800px;
+  width: 100%;             /* full width of parent */
+  max-width: 1000px;       /* match slideshow max width */
+  padding: 0 2rem;         /* horizontal padding inside container */
   font-size: 0.85rem;
   color: #666;
   text-align: center;
+  box-sizing: border-box;  /* includes padding in width */
+  margin: 0 auto;          /* center in container */
 }
+
 
 .work-item {
   display: flex;
@@ -86,13 +90,14 @@ h1, h2, h3 {
 /* SLIDESHOW CONTAINER */
 .slideshow-container {
   position: relative;
-  width: 1000px;   /* fixed width */
-  height: 600px;   /* fixed height */
+  width: 100%;             /* take full width of content */
+  max-width: 1000px;       /* limit max width */
+  height: 600px;           /* keep fixed height */
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: none; /* 🔥 removed black background */
+  background: none;
 }
 
 /* Make images/videos cover container */
