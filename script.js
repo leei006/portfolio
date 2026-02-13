@@ -16,15 +16,14 @@ const photo = [
     "year": 2024,
     "medium": "City collection of pandemic dining sheds.",
     "img": [
-      "img/collectionphotos3.jpg","img/collectionphotos1.jpg","img/collectionphotos2.jpg",
-      "img/collectionphotos4.jpg","img/collectionphotos5.jpg","img/collectionphotos6.jpg",
-      "img/collectionphotos7.jpg","img/collectionphotos8.jpg","img/collectionphotos9.jpg",
-      "img/collectionphotos10.jpg","img/collectionphotos11.jpg","img/collectionphotos12.jpg",
+      "img/collectionphotos3.jpg","img/collectionphotos1.jpg","img/collectionphotos2.jpg","img/collectionphotos6.jpg",
+      "img/collectionphotos8.jpg","img/collectionphotos9.jpg",
+      "img/collectionphotos10.jpg",
       "img/collectionphotos13.jpg","img/collectionphotos14.jpg","img/collectionphotos15.jpg",
       "img/collectionphotos16.jpg","img/collectionphotos17.jpg","img/collectionphotos18.jpg",
       "img/collectionphotos19.jpg","img/collectionphotos20.jpg","img/collectionphotos21.jpg",
       "img/collectionphotos22.jpg","img/collectionphotos23.jpg","img/collectionphotos24.jpg",
-      "img/collectionphotos25.jpg","img/collectionphotos26.jpg","img/collectionphotos27.jpg",
+      "img/collectionphotos25.jpg","img/collectionphotos27.jpg",
       "img/collectionphotos28.jpg","img/collectionphotos29.jpg"
     ]
   },
