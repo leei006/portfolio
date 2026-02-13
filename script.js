@@ -81,13 +81,7 @@ const photo = [
     "img": ["img/homeshoot1.jpg", "img/homeshoot2.jpg", "img/homeshoot3.jpg",
             "img/homeshoot4.jpg","img/homeshoot5.jpg"]
   },
-  {
-    "id": 9,
-    "title": "Food",
-    "year": 2024,
-    "medium": "Photography. Food styling.",
-    "img": ["img/1.jpg", "img/4.jpg"]
-  }
+
 ];
 
 function createMediaElement(src, title) {
