@@ -5,7 +5,7 @@ const photo = [
     "year": 2025,
     "medium": "Typeface Design. Draws from visual spirit of 1960’s  in San Francisco. Hand-painted concert posters, and psychedelic lettering.",
     "img": [
-      "img/groove.jpg", "img/groove2.jpg","img/groove3.jpg","img/groove4.jpg","img/groove5.jpg",
+      "img/groove.jpg", "img/groove2.JPG","img/groove3.jpg","img/groove4.jpg","img/groove5.jpg",
       "img/groove6.jpg","img/groove7.jpg","img/groove8.jpg","img/groove9.jpg","img/groove10.jpg",
       "img/groove11.jpg"
     ]
