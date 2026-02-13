@@ -66,8 +66,7 @@ const photo = [
     "title": "Gardening Book",
     "year": 2025,
     "medium": "Illustrations and found text in a 3.25 x 4.5 inch saddle stitch book.",
-    "img":["img/gardeningbook8.jpg","img/gardeningbook9.jpg","img/gardeningbook10.jpg",
-          "img/gardeningbook11.jpg","img/gardeningbook12.jpg","img/gardeningbook13.jpg",
+    "img":[
           "img/gardeningbook14.jpg","img/gardeningbook15.jpg","img/gardeningbook16.jpg",
           "img/gardeningbook17.jpg","img/gardeningbook18.jpg","img/gardeningbook19.jpg",
           "img/gardeningbook20.jpg","img/gardeningbook21.jpg","img/gardeningbook22.jpg",
