@@ -40,13 +40,6 @@ const photo = [
     ]
   },
   {
-    "id": 14,
-    "title": "Radishes",
-    "year": 2025,
-    "medium": "Photography",
-    "img": ["img/radish1.jpg",]
-  },
-  {
     "id": 11,
     "title": "Item In Hand",
     "year": 2025,
