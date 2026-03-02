@@ -12,19 +12,23 @@ document.addEventListener("DOMContentLoaded", () => {
   // MEDIA FUNCTIONS
   // ----------------------
   function createMediaElement(src, title) {
-    if (src.endsWith(".mp4")) {
+    if (src.toLowerCase().endsWith(".mp4")) {
       const video = document.createElement("video");
       video.src = src;
-      video.autoplay = true;
-      video.loop = true;
+      video.autoplay = false; // we control playback manually
+      video.loop = false;
       video.muted = true;
       video.playsInline = true;
+      video.style.width = "100%";
+      video.style.height = "100%";
       video.style.objectFit = "cover";
       return video;
     } else {
       const img = document.createElement("img");
       img.src = src;
       img.alt = title;
+      img.style.width = "100%";
+      img.style.height = "100%";
       img.style.objectFit = "cover";
       return img;
     }
@@ -51,6 +55,24 @@ document.addEventListener("DOMContentLoaded", () => {
         "img/groove.jpg","img/groove2.JPG","img/groove3.jpg","img/groove4.jpg",
         "img/groove5.jpg","img/groove6.jpg","img/groove7.jpg","img/groove8.jpg",
         "img/groove9.jpg","img/groove10.jpg","img/groove11.jpg"
+      ]
+    },
+    {
+      id: 17,
+      title: "Dog Days",
+      year: 2025,
+      medium: "Doodle series",
+      img: [
+        "img/dogcarecampaign.jpg"
+      ]
+    },
+    {
+      id: 16,
+      title: "The Kitchen Witch",
+      year: 2025,
+      medium: "Doodle series.",
+      img: [
+        "video/kitchenwitch1.mp4","video/kitchenwitch2.mp4","video/kitchenwitch3.mp4","video/kitchenwitch4.mp4", "video/kitchenwitch5.mp4"
       ]
     },
     {
@@ -135,10 +157,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const slideshowContainer = document.createElement("div");
     slideshowContainer.classList.add("slideshow-container");
+    slideshowContainer.style.position = "relative"; // stack media
 
+    // create all media elements
+    const mediaElements = item.img.map(src => createMediaElement(src, item.title));
     let currentIndex = 0;
-    let mediaElement = createMediaElement(item.img[0], item.title);
-    slideshowContainer.appendChild(mediaElement);
+
+    // append all but hide them except the first
+    mediaElements.forEach((el, i) => {
+      el.style.position = "absolute";
+      el.style.top = 0;
+      el.style.left = 0;
+      el.style.width = "100%";
+      el.style.height = "100%";
+      el.style.objectFit = "cover";
+      el.style.transition = "opacity 0.5s ease";
+      el.style.opacity = i === 0 ? 1 : 0;
+      slideshowContainer.appendChild(el);
+    });
+
+    // function to show next media
+    function showNext() {
+      const current = mediaElements[currentIndex];
+      currentIndex = (currentIndex + 1) % mediaElements.length;
+      const next = mediaElements[currentIndex];
+
+      current.style.opacity = 0;
+      next.style.opacity = 1;
+
+      if (next.tagName === "VIDEO") {
+        next.currentTime = 0;
+        next.play();
+        next.onended = showNext;
+      } else {
+        setTimeout(showNext, 3000); // display images 3 seconds
+      }
+    }
+
+    // start slideshow
+    if (mediaElements[0].tagName === "VIDEO") {
+      mediaElements[0].play();
+      mediaElements[0].onended = showNext;
+    } else {
+      setTimeout(showNext, 3000);
+    }
+
     workItem.appendChild(slideshowContainer);
 
     const titleEl = document.createElement("div");
@@ -158,26 +221,6 @@ document.addEventListener("DOMContentLoaded", () => {
     workItem.appendChild(mediumEl);
 
     workContainer.appendChild(workItem);
-
-    // AUTO ROTATE SLIDES
-    if (item.img.length > 1) {
-      let intervalId;
-      const observer = new IntersectionObserver(([entry]) => {
-        if (entry.isIntersecting) {
-          if (!intervalId) {
-            intervalId = setInterval(() => {
-              currentIndex = (currentIndex + 1) % item.img.length;
-              changeMedia(mediaElement, item.img[currentIndex], item.title);
-            }, 1500);
-          }
-        } else {
-          clearInterval(intervalId);
-          intervalId = null;
-        }
-      }, { threshold: 0.8 });
-
-      observer.observe(slideshowContainer);
-    }
 
     // OPEN MODAL ON CLICK
     workItem.addEventListener("click", () => openModal(item));
