@@ -172,7 +172,7 @@ a:hover {
   }
 
   .slideshow-container {
-    height: 200px;
+    height: auto;
   }
 
   .modal-content {
