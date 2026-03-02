@@ -7,105 +7,97 @@
 
 html, body {
   width: 100%;
-  height: 100%;
-  font-family: "acumin-pro", sans-serif; 
-  font-weight: 200; 
-  font-style: normal;
+  font-family: "acumin-pro", sans-serif;
+  font-weight: 200;
+  background: #fff;
+  color: #000;
 }
 
-/* MAIN SPLIT LAYOUT */
-.container {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  flex-direction: row; /* left = top, right = content */
-}
+/* ---------------------- */
+/* HEADER */
+/* ---------------------- */
 
-/* CONTENT (RIGHT side) */
-.content {
-  width: 65%;
+.header {
   padding: 2rem;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  position: relative;
-  z-index: 1;
 }
 
-/* TOP (LEFT side) */
-.top {
-  width: 35%;
-  padding: 2rem;
+.header-inner {
+  max-width: 420px;
   font-size: 0.85rem;
-  line-height: 1.4;
-}
-
-/* HEADERS */
-h1, h2, h3 {
-  width: 70%;
-  max-width: 800px;
-  text-align: left;
-}
-
-/* TEXT MATCH IMAGE WIDTH */
-.content p {
-  width: 70%;
-  max-width: 800px;
-  font-size: 1rem;
   line-height: 1.5;
 }
 
-/* CAPTIONS */
-.content .caption {
-  width: 100%;             /* full width of parent */
-  max-width: 1000px;       /* match slideshow max width */
-  padding: 0 2rem;         /* horizontal padding inside container */
-  font-size: 0.85rem;
-  color: #666;
-  text-align: center;
-  box-sizing: border-box;  /* includes padding in width */
-  margin: 0 auto;          /* center in container */
+.logo {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 
+.contact {
+  margin-bottom: 0.75rem;
+}
+
+.bio {
+  margin-bottom: 0.75rem;
+}
+
+.copyright {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Divider line */
+
+.divider {
+  border: none;
+  border-top: 1px solid #000;
+  margin: 0;
+}
+
+/* ---------------------- */
+/* GRID */
+/* ---------------------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 2rem;
+}
+
+/* Work item */
 
 .work-item {
   display: flex;
   flex-direction: column;
-  gap: 1rem;           
-  margin-bottom: 2rem;   
+  gap: 0.5rem;
+  cursor: pointer;
 }
 
-/* SCROLLBAR */
-.content::-webkit-scrollbar {
-  width: 8px;
-}
+/* Slideshow container */
 
-.content::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 4px;
-}
-
-/* SLIDESHOW CONTAINER */
 .slideshow-container {
   position: relative;
-  width: 100%;             /* take full width of content */
-  max-width: 1000px;       /* limit max width */
-  height: 600px;           /* keep fixed height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  height: 400px;
   overflow: hidden;
-  background: none;
 }
 
-/* Make images/videos cover container */
+/* Images & Video */
+
 .slideshow-container img,
 .slideshow-container video {
   width: 100%;
-  height: 100%;
-  object-fit: cover;  /* 🔥 fill container, crop if needed */
+  height: auto;
+  object-fit: cover;
   transition: opacity 0.5s ease;
   opacity: 1;
 }
@@ -114,40 +106,77 @@ h1, h2, h3 {
   opacity: 0;
 }
 
-/* Hide slideshow click zones */
-.slideshow-left,
-.slideshow-right {
-  display: none;
+/* Text under each project */
+
+.work-title {
+  font-size: 0.9rem;
 }
 
+.work-year,
+.work-medium {
+  font-size: 0.75rem;
+  color: #555;
+}
 
+/* ---------------------- */
+/* MODAL */
+/* ---------------------- */
 
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+}
 
-/* Responsive layout: stack top above content on smaller screens */
-@media (max-width: 1250px) {
-  .container {
-    flex-direction: column; /* stack top and content vertically */
+.modal-content {
+  background: white;
+  width: 70%;
+  max-width: 1000px;
+  margin: 5% auto;
+  padding: 2rem;
+  position: relative;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.modal-content img,
+.modal-content video {
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ---------------------- */
+/* RESPONSIVE */
+/* ---------------------- */
+
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  .top {
-    width: 100%;            /* full width at top */
-    border-right: none;     /* remove any right border if present */
-    border-bottom: 1px solid #ddd; /* optional: separate top from content */
-  }
-
-  .content {
-    width: 100%;            /* full width for content */
-  }
-
-  h1, h2, h3,
-  .content p,
-  .content .caption {
-    width: 90%;             /* adjust text width for smaller screens */
-    max-width: none;
+@media (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
   }
 
   .slideshow-container {
-    width: 100%;            /* make slideshow full width */
-    height: 400px;          /* optional: reduce height on mobile */
+    height: 200px;
+  }
+
+  .modal-content {
+    width: 90%;
+    margin: 10% auto;
   }
 }
