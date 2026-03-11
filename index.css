@@ -32,7 +32,7 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1600px;
+  max-width: 2000px;
   margin: 0 auto;
   padding: 0;
 }
@@ -84,7 +84,7 @@ html, body {
 
 /* ================= GRID / WORK ITEMS ================= */
 .grid {
-  column-count: 3;
+  column-count: 4;
   column-gap: 40px;
   padding: 2rem;
 }

@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ----------------------
-  // PHOTO ARRAY
+  // PHOTO ARRAY on 18
   // ----------------------
   const photo = [
     {
@@ -41,23 +41,33 @@ document.addEventListener("DOMContentLoaded", () => {
       ]
     },
     {
+      id: 12,
+      title: "Wiki Book",
+      year: 2025,
+      medium: "Graphic Design",
+      img: [
+        "img/wiki12.jpg","img/wiki2.jpg","img/wiki3.jpg","img/wiki4.jpg","img/wiki5.jpg",
+        "img/wiki6.jpg","img/wiki7.jpg","img/wiki8.jpg","img/wiki9.jpg","img/wiki10.jpg",
+        "img/wiki11.jpg"
+      ]
+    },
+    {
+      id: 18,
+      title: "Leek",
+      year: 2026,
+      medium: "Illustrator Graphic.",
+      img: [
+        "img/leek.jpg"
+      ]
+    },
+    {
       id: 17,
       title: "Dog Days",
       year: 2025,
       medium: "Doodle series",
       img: ["img/dogcarecampaign.jpg"]
     },
-    {
-      id: 16,
-      title: "The Kitchen Witch",
-      year: 2025,
-      medium: "Doodle series.",
-      img: [
-        "video/kitchenwitch1.mp4","video/kitchenwitch2.mp4",
-        "video/kitchenwitch3.mp4","video/kitchenwitch4.mp4",
-        "video/kitchenwitch5.mp4"
-      ]
-    },
+
     {
       id: 2,
       title: "Dining Shed Collection",
@@ -75,14 +85,14 @@ document.addEventListener("DOMContentLoaded", () => {
       ]
     },
     {
-      id: 12,
-      title: "Wiki Book",
+      id: 16,
+      title: "The Kitchen Witch",
       year: 2025,
-      medium: "Graphic Design",
+      medium: "Doodle series.",
       img: [
-        "img/wiki12.jpg","img/wiki2.jpg","img/wiki3.jpg","img/wiki4.jpg","img/wiki5.jpg",
-        "img/wiki6.jpg","img/wiki7.jpg","img/wiki8.jpg","img/wiki9.jpg","img/wiki10.jpg",
-        "img/wiki11.jpg"
+        "video/kitchenwitch5.mp4", "video/kitchenwitch1.mp4","video/kitchenwitch2.mp4",
+        "video/kitchenwitch3.mp4","video/kitchenwitch4.mp4",
+        
       ]
     },
     {
@@ -92,6 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
       medium: "Graphic Design",
       img: ["img/iteminhand.jpg"]
     },
+
     {
       id: 10,
       title: "Park Benches",
