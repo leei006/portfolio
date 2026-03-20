@@ -30,14 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // ----------------------
   const photo = [
     {
-      id: 15,
-      title: "Groove",
-      year: 2025,
-      medium: "Typeface Design. Draws from visual spirit of 1960’s in San Francisco. Hand-painted concert posters, and psychedelic lettering.",
+      id: 19,
+      title: "A Space to Remember",
+      year: 2026,
+      medium: "Book Design. Photography. Senior Thesis",
       img: [
-        "img/groove.jpg","img/groove2.JPG","img/groove3.jpg","img/groove4.jpg",
-        "img/groove5.jpg","img/groove6.jpg","img/groove7.jpg","img/groove8.jpg",
-        "img/groove9.jpg","img/groove10.jpg","img/groove11.jpg"
+        "img/thesis4.jpg","img/thesis1.jpg", "img/thesis2.jpg","img/thesis3.jpg"
+        
       ]
     },
     {
@@ -49,6 +48,17 @@ document.addEventListener("DOMContentLoaded", () => {
         "img/wiki12.jpg","img/wiki2.jpg","img/wiki3.jpg","img/wiki4.jpg","img/wiki5.jpg",
         "img/wiki6.jpg","img/wiki7.jpg","img/wiki8.jpg","img/wiki9.jpg","img/wiki10.jpg",
         "img/wiki11.jpg"
+      ]
+    },
+    {
+      id: 15,
+      title: "Groove",
+      year: 2025,
+      medium: "Typeface Design. Draws from visual spirit of 1960’s in San Francisco. Hand-painted concert posters, and psychedelic lettering.",
+      img: [
+        "img/groove.jpg","img/groove2.JPG","img/groove3.jpg","img/groove4.jpg",
+        "img/groove5.jpg","img/groove6.jpg","img/groove7.jpg","img/groove8.jpg",
+        "img/groove9.jpg","img/groove10.jpg","img/groove11.jpg"
       ]
     },
     {
