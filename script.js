@@ -35,8 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
       year: 2026,
       medium: "Book Design. Photography. Senior Thesis",
       img: [
-        "img/thesis4.jpg","img/thesis1.jpg", "img/thesis2.jpg","img/thesis3.jpg"
-        
+      "img/thesis4.jpg","img/thesis1.jpg", "img/thesis2.jpg","img/thesis3.jpg","img/thesis5.jpg","img/thesis6.jpg","img/thesis7.jpg","img/thesis8.jpg","img/thesis9.jpg","img/thesis10.jpg","img/thesis11.jpg","img/thesis12.jpg","img/thesis13.jpg","img/thesis14.jpg","img/thesis15.jpg","img/thesis16.jpg","img/thesis17.jpg","img/thesi18.jpg","img/thesis19.jpg","img/thesis20.jpg","img/thesis21.jpg","img/thesis22.jpg"
       ]
     },
     {
