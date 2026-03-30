@@ -30,14 +30,26 @@ document.addEventListener("DOMContentLoaded", () => {
   // ----------------------
   const photo = [
     {
-      id: 19,
-      title: "A Space to Remember",
-      year: 2026,
-      medium: "Book Design. Photography. Senior Thesis",
+      id: 16,
+      title: "The Kitchen Witch",
+      year: 2025,
+      medium: "Doodle series.",
       img: [
-      "img/thesis4.jpg","img/thesis1.jpg", "img/thesis2.jpg","img/thesis3.jpg","img/thesis5.jpg","img/thesis6.jpg","img/thesis7.jpg","img/thesis8.jpg","img/thesis9.jpg","img/thesis10.jpg","img/thesis11.jpg","img/thesis12.jpg","img/thesis13.jpg","img/thesis14.jpg","img/thesis15.jpg","img/thesis16.jpg","img/thesis17.jpg","img/thesi18.jpg","img/thesis19.jpg","img/thesis20.jpg","img/thesis21.jpg","img/thesis22.jpg"
+        "video/kitchenwitch5.mp4", "video/kitchenwitch1.mp4","video/kitchenwitch2.mp4",
+        "video/kitchenwitch3.mp4","video/kitchenwitch4.mp4",
+        
       ]
     },
+    {
+      id: 20,
+      title: "A Bundle of Grapes",
+      year: 2026,
+      medium: "Adobe Illustration",
+      img: [
+      "img/grape.jpg"
+      ]
+    },
+
     {
       id: 12,
       title: "Wiki Book",
@@ -60,22 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "img/groove9.jpg","img/groove10.jpg","img/groove11.jpg"
       ]
     },
-    {
-      id: 18,
-      title: "Leek",
-      year: 2026,
-      medium: "Illustrator Graphic.",
-      img: [
-        "img/leek.jpg"
-      ]
-    },
-    {
-      id: 17,
-      title: "Dog Days",
-      year: 2025,
-      medium: "Doodle series",
-      img: ["img/dogcarecampaign.jpg"]
-    },
+ 
 
     {
       id: 2,
@@ -93,17 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "img/collectionphotos28.jpg","img/collectionphotos29.jpg"
       ]
     },
-    {
-      id: 16,
-      title: "The Kitchen Witch",
-      year: 2025,
-      medium: "Doodle series.",
-      img: [
-        "video/kitchenwitch5.mp4", "video/kitchenwitch1.mp4","video/kitchenwitch2.mp4",
-        "video/kitchenwitch3.mp4","video/kitchenwitch4.mp4",
-        
-      ]
-    },
+
     {
       id: 11,
       title: "Item In Hand",
@@ -111,7 +98,13 @@ document.addEventListener("DOMContentLoaded", () => {
       medium: "Graphic Design",
       img: ["img/iteminhand.jpg"]
     },
-
+    {
+      id: 17,
+      title: "Dog Days",
+      year: 2025,
+      medium: "Doodle series",
+      img: ["img/dogcarecampaign.jpg"]
+    },
     {
       id: 10,
       title: "Park Benches",
@@ -129,6 +122,24 @@ document.addEventListener("DOMContentLoaded", () => {
       year: 2023,
       medium: "Typographic print in color on copy paper.",
       img: ["img/vilmos1.jpg","img/vilmos2.jpg","img/vilmos3.jpg"]
+    },
+    {
+      id: 18,
+      title: "Leek",
+      year: 2026,
+      medium: "Illustrator Graphic.",
+      img: [
+        "img/leek.jpg"
+      ]
+    },
+    {
+      id: 19,
+      title: "A Space to Remember",
+      year: 2026,
+      medium: "Book Design. Photography. Senior Thesis",
+      img: [
+      "img/thesis4.jpg","img/thesis1.jpg", "img/thesis2.jpg","img/thesis3.jpg","img/thesis5.jpg","img/thesis6.jpg","img/thesis7.jpg","img/thesis8.jpg","img/thesis9.jpg","img/thesis10.jpg","img/thesis11.jpg","img/thesis12.jpg","img/thesis13.jpg","img/thesis14.jpg","img/thesis15.jpg","img/thesis16.jpg","img/thesis17.jpg","img/thesi18.jpg","img/thesis19.jpg","img/thesis20.jpg","img/thesis21.jpg","img/thesis22.jpg"
+      ]
     },
     
   ];
