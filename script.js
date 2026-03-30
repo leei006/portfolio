@@ -72,6 +72,16 @@ document.addEventListener("DOMContentLoaded", () => {
         "img/groove9.jpg","img/groove10.jpg","img/groove11.jpg"
       ]
     },
+    {
+      id: 21,
+      title: "French Onion Soup",
+      year: 2026,
+      medium: "Illustration series.",
+      img: [
+        "img/frenchonionsoup.jpg", "img/frenchonionsoup2.jpg", "img/frenchonionsoup3.jpg", "img/frenchonionsoup4.jpg", "img/frenchonionsoup5.jpg", "img/frenchonionsoup6.jpg", "img/frenchonionsoup7.jpg", "img/frenchonionsoup8.jpg",
+        
+      ]
+    },
  
 
     {
