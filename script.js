@@ -30,6 +30,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // ----------------------
   const photo = [
     {
+      id: 22,
+      title: "Condiment Fridge",
+      year: 2026,
+      medium: "Illustration series.",
+      img: [
+        "img/foodgraphics1.jpg","img/foodgraphics2.jpg",
+        
+      ]
+    },
+    {
       id: 16,
       title: "The Kitchen Witch",
       year: 2025,
@@ -38,15 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "video/kitchenwitch5.mp4", "video/kitchenwitch1.mp4","video/kitchenwitch2.mp4",
         "video/kitchenwitch3.mp4","video/kitchenwitch4.mp4",
         
-      ]
-    },
-    {
-      id: 20,
-      title: "A Bundle of Grapes",
-      year: 2026,
-      medium: "Adobe Illustration",
-      img: [
-      "img/grape.jpg"
       ]
     },
 
