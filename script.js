@@ -30,6 +30,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // ----------------------
   const photo = [
     {
+      id: 23,
+      title: "Rhubarb Season",
+      year: 2026,
+      medium: "Illustration series.",
+      img: [
+        "img/rhubarb.png",
+        
+      ]
+    },
+    {
       id: 22,
       title: "Condiment Fridge",
       year: 2026,
