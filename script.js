@@ -40,12 +40,22 @@ document.addEventListener("DOMContentLoaded", () => {
       ]
     },
     {
+      id: 24,
+      title: "Jellies and Jams",
+      year: 2026,
+      medium: "Illustration series.",
+      img: [
+        "img/jelly.png",
+        
+      ]
+    },
+    {
       id: 22,
       title: "Condiment Fridge",
       year: 2026,
       medium: "Illustration series.",
       img: [
-        "img/foodgraphics1.jpg","img/foodgraphics2.jpg",
+        "img/foodgraphics1.png","img/foodgraphics2.jpg",
         
       ]
     },
