@@ -33,9 +33,19 @@ document.addEventListener("DOMContentLoaded", () => {
       id: 23,
       title: "Rhubarb Season",
       year: 2026,
-      medium: "Illustration series.",
+      medium: "Illustration.",
       img: [
         "img/rhubarb.png",
+        
+      ]
+    },
+    {
+      id: 23,
+      title: "Spring Is Here",
+      year: 2026,
+      medium: "Illustration.",
+      img: [
+        "img/spring.png",
         
       ]
     },
@@ -43,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
       id: 24,
       title: "Jellies and Jams",
       year: 2026,
-      medium: "Illustration series.",
+      medium: "Illustration.",
       img: [
         "img/jelly2.png",
         
@@ -53,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
       id: 22,
       title: "Condiment Fridge",
       year: 2026,
-      medium: "Illustration series.",
+      medium: "Illustration.",
       img: [
         "img/foodgraphics1.png","img/foodgraphics2.jpg",
         
