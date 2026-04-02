@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
       year: 2026,
       medium: "Illustration series.",
       img: [
-        "img/jelly.png",
+        "img/jelly2.png",
         
       ]
     },
