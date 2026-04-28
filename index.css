@@ -156,6 +156,28 @@ html, body {
   cursor: pointer;
 }
 
+/* FILTER BAR */
+.filter-bar {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #000;
+}
+
+.filter-bar button {
+  background: none;
+  font-family: "aleo", sans-serif; /* 👈 ADD THIS */
+  font-weight: 200;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+
+.filter-bar button.active {
+  color: orangered;
+  text-decoration: underline;
+}
+
 /* ================= RESPONSIVE ================= */
 @media (max-width: 1200px) {
   .grid {

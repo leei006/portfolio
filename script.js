@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ----------------------
-  // PHOTO ARRAY on 18
+  // DATA (YOUR FULL ARRAY + CATEGORY)
   // ----------------------
   const photo = [
     {
@@ -34,58 +34,34 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Rhubarb Season",
       year: 2026,
       medium: "Illustration.",
-      img: [
-        "img/rhubarb.png",
-        
-      ]
-    },
-    {
-      id: 23,
-      title: "Spring Is Here",
-      year: 2026,
-      medium: "Illustration.",
-      img: [
-        "img/spring.png",
-        
-      ]
-    },
-    {
-      id: 24,
-      title: "Jellies and Jams",
-      year: 2026,
-      medium: "Illustration.",
-      img: [
-        "img/jelly2.png",
-        
-      ]
+      category: "illustration",
+      img: ["img/rhubarb.png"]
     },
     {
       id: 22,
       title: "Condiment Fridge",
       year: 2026,
       medium: "Illustration.",
-      img: [
-        "img/foodgraphics1.png","img/foodgraphics2.jpg",
-        
-      ]
+      category: "illustration",
+      img: ["img/foodgraphics1.png","img/foodgraphics2.jpg"]
     },
     {
       id: 16,
       title: "The Kitchen Witch",
       year: 2025,
       medium: "Doodle series.",
+      category: "illustration",
       img: [
-        "video/kitchenwitch5.mp4", "video/kitchenwitch1.mp4","video/kitchenwitch2.mp4",
-        "video/kitchenwitch3.mp4","video/kitchenwitch4.mp4",
-        
+        "video/kitchenwitch5.mp4","video/kitchenwitch1.mp4",
+        "video/kitchenwitch2.mp4","video/kitchenwitch3.mp4","video/kitchenwitch4.mp4"
       ]
     },
-
     {
       id: 12,
       title: "Wiki Book",
       year: 2025,
       medium: "Graphic Design",
+      category: "design",
       img: [
         "img/wiki12.jpg","img/wiki2.jpg","img/wiki3.jpg","img/wiki4.jpg","img/wiki5.jpg",
         "img/wiki6.jpg","img/wiki7.jpg","img/wiki8.jpg","img/wiki9.jpg","img/wiki10.jpg",
@@ -96,7 +72,8 @@ document.addEventListener("DOMContentLoaded", () => {
       id: 15,
       title: "Groove",
       year: 2025,
-      medium: "Typeface Design. Draws from visual spirit of 1960’s in San Francisco. Hand-painted concert posters, and psychedelic lettering.",
+      medium: "Typeface Design.",
+      category: "design",
       img: [
         "img/groove.jpg","img/groove2.JPG","img/groove3.jpg","img/groove4.jpg",
         "img/groove5.jpg","img/groove6.jpg","img/groove7.jpg","img/groove8.jpg",
@@ -108,18 +85,19 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "French Onion Soup",
       year: 2026,
       medium: "Illustration series.",
+      category: "illustration",
       img: [
-        "img/frenchonionsoup.jpg", "img/frenchonionsoup2.jpg", "img/frenchonionsoup3.jpg", "img/frenchonionsoup4.jpg", "img/frenchonionsoup5.jpg", "img/frenchonionsoup6.jpg", "img/frenchonionsoup7.jpg", "img/frenchonionsoup8.jpg",
-        
+        "img/frenchonionsoup.jpg","img/frenchonionsoup2.jpg","img/frenchonionsoup3.jpg",
+        "img/frenchonionsoup4.jpg","img/frenchonionsoup5.jpg","img/frenchonionsoup6.jpg",
+        "img/frenchonionsoup7.jpg","img/frenchonionsoup8.jpg"
       ]
     },
- 
-
     {
       id: 2,
       title: "Dining Shed Collection",
       year: 2024,
-      medium: "City collection of pandemic dining sheds.",
+      medium: "Photography",
+      category: "photo",
       img: [
         "img/collectionphotos3.jpg","img/collectionphotos1.jpg","img/collectionphotos2.jpg",
         "img/collectionphotos6.jpg","img/collectionphotos8.jpg","img/collectionphotos9.jpg",
@@ -131,12 +109,12 @@ document.addEventListener("DOMContentLoaded", () => {
         "img/collectionphotos28.jpg","img/collectionphotos29.jpg"
       ]
     },
-
     {
       id: 11,
       title: "Item In Hand",
       year: 2025,
       medium: "Graphic Design",
+      category: "design",
       img: ["img/iteminhand.jpg"]
     },
     {
@@ -144,6 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Dog Days",
       year: 2025,
       medium: "Doodle series",
+      category: "illustration",
       img: ["img/dogcarecampaign.jpg"]
     },
     {
@@ -151,6 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Park Benches",
       year: 2024,
       medium: "Photography",
+      category: "photo",
       img: [
         "img/bench2.jpg","img/bench3.jpg","img/bench4.jpg",
         "img/bench6.jpg","img/bench7.jpg","img/bench8.jpg",
@@ -161,7 +141,8 @@ document.addEventListener("DOMContentLoaded", () => {
       id: 1,
       title: "De Stijl",
       year: 2023,
-      medium: "Typographic print in color on copy paper.",
+      medium: "Typographic print",
+      category: "design",
       img: ["img/vilmos1.jpg","img/vilmos2.jpg","img/vilmos3.jpg"]
     },
     {
@@ -169,56 +150,81 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Leek",
       year: 2026,
       medium: "Illustrator Graphic.",
-      img: [
-        "img/leek.jpg"
-      ]
+      category: "illustration",
+      img: ["img/leek.jpg"]
     },
     {
       id: 19,
       title: "A Space to Remember",
       year: 2026,
-      medium: "Book Design. Photography. Senior Thesis",
+      medium: "Book Design. Photography.",
+      category: "design",
       img: [
-      "img/thesis4.jpg","img/thesis1.jpg", "img/thesis2.jpg","img/thesis3.jpg","img/thesis5.jpg","img/thesis6.jpg","img/thesis7.jpg","img/thesis8.jpg","img/thesis9.jpg","img/thesis10.jpg","img/thesis11.jpg","img/thesis12.jpg","img/thesis13.jpg","img/thesis14.jpg","img/thesis15.jpg","img/thesis16.jpg","img/thesis17.jpg","img/thesi18.jpg","img/thesis19.jpg","img/thesis20.jpg","img/thesis21.jpg","img/thesis22.jpg"
+        "img/thesis4.jpg","img/thesis1.jpg","img/thesis2.jpg","img/thesis3.jpg",
+        "img/thesis5.jpg","img/thesis6.jpg","img/thesis7.jpg","img/thesis8.jpg",
+        "img/thesis9.jpg","img/thesis10.jpg","img/thesis11.jpg","img/thesis12.jpg",
+        "img/thesis13.jpg","img/thesis14.jpg","img/thesis15.jpg","img/thesis16.jpg",
+        "img/thesis17.jpg","img/thesi18.jpg","img/thesis19.jpg","img/thesis20.jpg",
+        "img/thesis21.jpg","img/thesis22.jpg"
       ]
-    },
-    
+    }
   ];
 
   // ----------------------
-  // RENDER GRID
+  // RENDER
   // ----------------------
-  photo.forEach(item => {
+  function renderGrid(filter = "all") {
+    workContainer.innerHTML = "";
 
-    const workItem = document.createElement("div");
-    workItem.classList.add("work-item");
+    const filtered = photo.filter(item => {
+      if (filter === "all") return true;
+      return item.category === filter;
+    });
 
-    // Only show the first media as preview
-    const previewMedia = createMediaElement(item.img[0], item.title);
-    previewMedia.classList.add("preview");
-    workItem.appendChild(previewMedia);
+    filtered.forEach(item => {
 
-    // Text under each project
-    const titleEl = document.createElement("div");
-    titleEl.classList.add("work-title");
-    titleEl.textContent = item.title;
+      const workItem = document.createElement("div");
+      workItem.classList.add("work-item");
 
-    const yearEl = document.createElement("div");
-    yearEl.classList.add("work-year");
-    yearEl.textContent = item.year;
+      const previewMedia = createMediaElement(item.img[0], item.title);
+      previewMedia.classList.add("preview");
+      workItem.appendChild(previewMedia);
 
-    const mediumEl = document.createElement("div");
-    mediumEl.classList.add("work-medium");
-    mediumEl.textContent = item.medium;
+      const titleEl = document.createElement("div");
+      titleEl.classList.add("work-title");
+      titleEl.textContent = item.title;
 
-    workItem.appendChild(titleEl);
-    workItem.appendChild(yearEl);
-    workItem.appendChild(mediumEl);
+      const yearEl = document.createElement("div");
+      yearEl.classList.add("work-year");
+      yearEl.textContent = item.year;
 
-    workContainer.appendChild(workItem);
+      const mediumEl = document.createElement("div");
+      mediumEl.classList.add("work-medium");
+      mediumEl.textContent = item.medium;
 
-    workItem.addEventListener("click", () => openModal(item));
+      workItem.appendChild(titleEl);
+      workItem.appendChild(yearEl);
+      workItem.appendChild(mediumEl);
 
+      workContainer.appendChild(workItem);
+
+      workItem.addEventListener("click", () => openModal(item));
+    });
+  }
+
+  // ----------------------
+  // FILTER BUTTONS
+  // ----------------------
+  const filterButtons = document.querySelectorAll(".filter-bar button");
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      filterButtons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const filter = btn.dataset.filter;
+      renderGrid(filter);
+    });
   });
 
   // ----------------------
@@ -253,5 +259,8 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.style.display = "none";
     }
   });
+
+  // INITIAL LOAD
+  renderGrid();
 
 });

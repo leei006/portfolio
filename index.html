@@ -4,21 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fonts -->
   <link rel="stylesheet" href="https://use.typekit.net/qjo7ols.css">
-  <!-- Your CSS -->
   <link rel="stylesheet" href="index.css">
-
-  <!-- Your JS (IMPORTANT: keep defer) -->
   <script src="script.js" defer></script>
 
   <title>Isabel Y. Lee</title>
   <link rel="icon" type="image/x-icon" href="img/favicon.png">
 </head>
 
+
+
 <body>
 
-  <!-- ================= TOP BAR ================= -->
+  <!-- TOP BAR -->
   <header class="top-bar">
     <div class="top-bar-inner">
       <div class="logo">IYL</div>
@@ -29,13 +27,12 @@
     </div>
   </header>
 
-  <!-- ================= HEADER / BIO ================= -->
+  <!-- HEADER -->
   <div class="header">
     <div class="header-inner">
       <div class="bio">
         I’m Isabel, a multidisciplinary designer based in New York and the Bay Area,
-        passionate about the intersection <br>of food and design. While my core strength is graphic design, I also have experience in photography, illustration, <br>and animation.
-        I believe that exploring multiple creative avenues makes me a stronger, more versatile artist.
+        passionate about the intersection <br>of food and design.
       </div>
 
       <div class="copyright">
@@ -44,13 +41,20 @@
     </div>
   </div>
 
-  <!-- Divider Line -->
   <hr class="divider">
 
-  <!-- ================= GRID ================= -->
+  <!-- ✅ FILTER BAR -->
+  <div class="filter-bar">
+    <button data-filter="all" class="active">All</button>
+    <button data-filter="photo">Photos</button>
+    <button data-filter="illustration">Illustrations</button>
+    <button data-filter="design">Design</button>
+  </div>
+
+  <!-- GRID -->
   <div class="grid" id="work-container"></div>
 
-  <!-- ================= MODAL ================= -->
+  <!-- MODAL -->
   <div id="modal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
