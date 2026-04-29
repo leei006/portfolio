@@ -53,7 +53,28 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "illustration",
       img: [
         "video/kitchenwitch5.mp4","video/kitchenwitch1.mp4",
-        "video/kitchenwitch2.mp4","video/kitchenwitch3.mp4","video/kitchenwitch4.mp4"
+        "video/kitchenwitch2.mp4"
+      ]
+    },
+  
+    {
+      id: 26,
+      title: "The Kitchen Witch",
+      year: 2025,
+      medium: "Doodle series.",
+      category: "illustration",
+      img: [
+        "video/kitchenwitch4.mp4"
+      ]
+    },
+    {
+      id: 27,
+      title: "The Kitchen Witch",
+      year: 2025,
+      medium: "Doodle series.",
+      category: "illustration",
+      img: [
+        "video/kitchenwitch3.mp4"
       ]
     },
     {
@@ -154,13 +175,29 @@ document.addEventListener("DOMContentLoaded", () => {
       img: ["img/leek.jpg"]
     },
     {
+      id: 24,
+      title: "Chocolate Cake",
+      year: 2025,
+      medium: "Food styling + Photography",
+      category: "photo",
+      img: ["img/cake1.jpg",]
+    },
+    {
+      id: 25,
+      title: "Pulao",
+      year: 2025,
+      medium: "Food styling + Photography",
+      category: "photo",
+      img: ["img/rice1.jpg",]
+    },
+    {
       id: 19,
       title: "A Space to Remember",
       year: 2026,
       medium: "Book Design. Photography.",
       category: "design",
       img: [
-        "img/thesis4.jpg","img/thesis1.jpg","img/thesis2.jpg","img/thesis3.jpg",
+        "img/thesis2.jpg","img/thesis4.jpg","img/thesis1.jpg","img/thesis3.jpg",
         "img/thesis5.jpg","img/thesis6.jpg","img/thesis7.jpg","img/thesis8.jpg",
         "img/thesis9.jpg","img/thesis10.jpg","img/thesis11.jpg","img/thesis12.jpg",
         "img/thesis13.jpg","img/thesis14.jpg","img/thesis15.jpg","img/thesis16.jpg",
@@ -169,6 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ]
     }
   ];
+
 
   // ----------------------
   // RENDER
