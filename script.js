@@ -48,14 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
       img: ["img/rhubarb.png"]
     },
     {
-      id: 22,
-      title: "Condiment Fridge",
-      year: 2026,
-      medium: "Illustration.",
-      category: "illustration",
-      img: ["img/foodgraphics1.png","img/foodgraphics2.jpg"]
-    },
-    {
       id: 16,
       title: "The Kitchen Witch",
       year: 2025,
