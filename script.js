@@ -30,6 +30,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // ----------------------
   const photo = [
     {
+      id: 28,
+      title: "What's With the Two-Button Rule?",
+      year: 2026,
+      medium: "Doodle series.",
+      category: "illustration",
+      img: [
+        "video/buttonanimation.MP4"
+      ]
+    },
+    {
       id: 23,
       title: "Rhubarb Season",
       year: 2026,
