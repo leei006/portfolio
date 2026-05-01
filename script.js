@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
       medium: "Book Design.",
       category: "design",
       img: [
-        "video/iteminhand.MP4","img/iteminhand1.jpg"
+        "video/iteminhand.mp4","img/iteminhand1.jpg"
       ]
     },
     {
