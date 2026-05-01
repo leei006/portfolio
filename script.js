@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Item In Hand",
       year: 2026,
       medium: "Book Design.",
-      category: "Graphic Design",
+      category: "design",
       img: [
         "video/iteminhand.MP4","img/iteminhand1.jpg"
       ]
