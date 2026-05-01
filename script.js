@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // DATA (YOUR FULL ARRAY + CATEGORY)
   // ----------------------
   const photo = [
+
     {
       id: 29,
       title: "Item In Hand",
@@ -37,6 +38,16 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "design",
       img: [
         "video/iteminhand.MP4","img/iteminhand1.jpg"
+      ]
+    },
+    {
+      id: 30,
+      title: "Thesis Exhibition",
+      year: 2026,
+      medium: "Book Design.",
+      category: "design",
+      img: [
+        "img/thesisfair3.jpeg", "img/thesisfair2.jpeg", "img/thesisfair1.jpeg",
       ]
     },
     {
@@ -49,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "video/buttonanimation.MP4"
       ]
     },
+
     {
       id: 23,
       title: "Rhubarb Season",
