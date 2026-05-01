@@ -30,6 +30,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // ----------------------
   const photo = [
     {
+      id: 29,
+      title: "Item In Hand",
+      year: 2026,
+      medium: "Book Design.",
+      category: "Graphic Design",
+      img: [
+        "video/iteminhand.MP4","img/iteminhand1.jpg"
+      ]
+    },
+    {
       id: 28,
       title: "What's With the Two-Button Rule?",
       year: 2026,
@@ -131,14 +141,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "img/collectionphotos24.jpg","img/collectionphotos25.jpg","img/collectionphotos27.jpg",
         "img/collectionphotos28.jpg","img/collectionphotos29.jpg"
       ]
-    },
-    {
-      id: 11,
-      title: "Item In Hand",
-      year: 2025,
-      medium: "Graphic Design",
-      category: "design",
-      img: ["img/iteminhand.jpg"]
     },
     {
       id: 17,
