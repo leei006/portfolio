@@ -6,7 +6,7 @@
 }
 
 html, body {
-  font-family: "aleo", sans-serif; /* default font for body/bio/work */
+  font-family: "aleo", sans-serif;
   font-weight: 200;
   font-style: normal;
   width: 100%;
@@ -55,12 +55,12 @@ html, body {
 }
 
 .header-inner {
-  max-width: 700px;  
-  margin: 0;         /* left-align under logo */
+  max-width: 700px;
+  margin: 0;
   font-size: 0.85rem;
   line-height: 1.5;
   text-align: left;
-  padding-left: 0;   /* remove extra left padding */
+  padding-left: 0;
 }
 
 .bio {
@@ -80,6 +80,28 @@ html, body {
   border: none;
   border-top: 1px solid #000;
   margin: 0;
+}
+
+/* ================= FILTER BAR ================= */
+.filter-bar {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #000;
+}
+
+.filter-bar button {
+  background: none;
+  font-family: "aleo", sans-serif;
+  font-weight: 200;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+
+.filter-bar button.active {
+  color: orangered;
+  text-decoration: underline;
 }
 
 /* ================= GRID / WORK ITEMS ================= */
@@ -105,20 +127,6 @@ html, body {
   display: block;
 }
 
-.work-title {
-  font-size: 0.9rem;
-  font-family: "aleo", sans-serif;
-  font-weight: 200;
-}
-
-.work-year,
-.work-medium {
-  font-size: 0.75rem;
-  color: #555;
-  font-family: "aleo", sans-serif;
-  font-weight: 200;
-}
-
 /* ================= MODAL ================= */
 .modal {
   display: none;
@@ -130,8 +138,8 @@ html, body {
 
 .modal-content {
   background: white;
-  width: 70%;
-  max-width: 1000px;
+  width: 85%;
+  max-width: 1300px;
   margin: 5% auto;
   padding: 2rem;
   position: relative;
@@ -139,43 +147,50 @@ html, body {
   overflow-y: auto;
 }
 
-.modal-content img,
-.modal-content video {
-  width: auto;
-  max-width: 600px; /* smaller modal images/videos */
-  height: auto;
-  display: block;
-  margin: 1rem auto;
+/* ================= MODAL LAYOUT ================= */
+.modal-layout {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 2.5rem;
 }
 
+/* TEXT PANEL */
+.modal-text {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  position: sticky;
+  top: 0;
+  max-width: 320px;
+}
+
+.modal-text h2 {
+  margin-bottom: 0.5rem;
+}
+
+.modal-text p {
+  margin-bottom: 0.75rem;
+}
+
+/* MEDIA GRID */
+.modal-media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.modal-media-item {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* CLOSE BUTTON */
 .close {
   position: absolute;
   top: 15px;
   right: 25px;
   font-size: 24px;
   cursor: pointer;
-}
-
-/* FILTER BAR */
-.filter-bar {
-  display: flex;
-  gap: 1.5rem;
-  padding: 1rem 2rem;
-  border-bottom: 1px solid #000;
-}
-
-.filter-bar button {
-  background: none;
-  font-family: "aleo", sans-serif; /* 👈 ADD THIS */
-  font-weight: 200;
-  border: none;
-  cursor: pointer;
-  color: black;
-}
-
-.filter-bar button.active {
-  color: orangered;
-  text-decoration: underline;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -185,7 +200,7 @@ html, body {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .grid {
     column-count: 1;
   }
@@ -193,5 +208,14 @@ html, body {
   .modal-content {
     width: 90%;
     margin: 10% auto;
+  }
+
+  .modal-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-text {
+    position: static;
+    max-width: 100%;
   }
 }
