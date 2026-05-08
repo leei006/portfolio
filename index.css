@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   font-family: "aleo", sans-serif;
   font-weight: 200;
   font-style: normal;
@@ -19,12 +20,17 @@ html, body {
   font-family: "fuuld", sans-serif;
   font-weight: 400;
   font-style: normal;
+
   width: 100%;
   background: #fff;
+
   padding: 0.75rem 2rem;
+
   border-bottom: 1px solid #000;
+
   position: sticky;
   top: 0;
+
   z-index: 1000;
 }
 
@@ -32,15 +38,16 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   max-width: 2000px;
   margin: 0 auto;
-  padding: 0;
 }
 
 .top-bar a {
   font-family: "fuuld", sans-serif;
   font-weight: 400;
   font-style: normal;
+
   text-decoration: none;
   color: inherit;
 }
@@ -49,33 +56,28 @@ html, body {
   text-decoration: underline;
 }
 
-/* ================= HEADER / BIO ================= */
+/* ================= HEADER ================= */
 .header {
   padding: 2rem;
 }
 
 .header-inner {
   max-width: 700px;
-  margin: 0;
+
   font-size: 0.85rem;
   line-height: 1.5;
-  text-align: left;
-  padding-left: 0;
 }
 
 .bio {
   margin-bottom: 1rem;
-  font-family: "aleo", sans-serif;
-  font-weight: 200;
 }
 
 .copyright {
   font-size: 0.75rem;
   color: #555;
-  font-family: "aleo", sans-serif;
 }
 
-/* Divider line */
+/* ================= DIVIDER ================= */
 .divider {
   border: none;
   border-top: 1px solid #000;
@@ -86,16 +88,20 @@ html, body {
 .filter-bar {
   display: flex;
   gap: 1.5rem;
+
   padding: 1rem 2rem;
+
   border-bottom: 1px solid #000;
 }
 
 .filter-bar button {
   background: none;
-  font-family: "aleo", sans-serif;
-  font-weight: 200;
   border: none;
   cursor: pointer;
+
+  font-family: "aleo", sans-serif;
+  font-weight: 200;
+
   color: black;
 }
 
@@ -104,19 +110,23 @@ html, body {
   text-decoration: underline;
 }
 
-/* ================= GRID / WORK ITEMS ================= */
+/* ================= GRID ================= */
 .grid {
   column-count: 4;
   column-gap: 40px;
+
   padding: 2rem;
 }
 
 .work-item {
   break-inside: avoid;
+
   margin-bottom: 40px;
+
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+
   cursor: pointer;
 }
 
@@ -127,70 +137,106 @@ html, body {
   display: block;
 }
 
-/* ================= MODAL ================= */
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.85);
-  z-index: 1000;
+.work-item div {
+  font-size: 0.8rem;
+  line-height: 1.3;
 }
+/* ================= WORK PAGE SLIDESHOW (MODAL-STYLE REBUILD) ================= */
 
-.modal-content {
-  background: white;
-  width: 85%;
-  max-width: 1300px;
-  margin: 5% auto;
-  padding: 2rem;
-  position: relative;
-  max-height: 85vh;
-  overflow-y: auto;
-}
-
-/* ================= MODAL LAYOUT ================= */
-.modal-layout {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 2.5rem;
-}
-
-/* TEXT PANEL */
-.modal-text {
-  font-size: 0.85rem;
-  line-height: 1.5;
-  position: sticky;
-  top: 0;
-  max-width: 320px;
-}
-
-.modal-text h2 {
-  margin-bottom: 0.5rem;
-}
-
-.modal-text p {
-  margin-bottom: 0.75rem;
-}
-
-/* MEDIA GRID */
-.modal-media-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 1.25rem;
-}
-
-.modal-media-item {
+#work-page {
   width: 100%;
-  height: auto;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff;
+  position: relative;
+}
+
+/* slideshow wrapper (replaces modal-slideshow) */
+.work-slideshow {
+  width: 68%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+/* media styling (same as your old slide-media) */
+.work-slideshow img,
+.work-slideshow video {
+  max-width: 100%;
+  max-height: 82vh;
+
+  object-fit: contain;
   display: block;
 }
 
-/* CLOSE BUTTON */
-.close {
-  position: absolute;
-  top: 15px;
-  right: 25px;
-  font-size: 24px;
+/* arrows (same behavior as modal arrows) */
+.work-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+
+  font-size: 42px;
+  font-weight: 200;
+
+  color: black;
   cursor: pointer;
+
+  z-index: 5000;
+
+  user-select: none;
+
+  padding: 20px;
+  width: 60px;
+  text-align: center;
+}
+
+.work-arrow.left {
+  left: 28px;
+}
+
+.work-arrow.right {
+  right: 28px;
+}
+
+.work-arrow:hover {
+  opacity: 0.6;
+}
+
+/* title (optional like modal caption feel) */
+#work-page h1 {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+
+  font-size: 0.85rem;
+  font-weight: 300;
+}
+
+/* back button */
+.work-back {
+  position: fixed;
+  top: 20px;
+  left: 28px;
+
+  font-size: 0.85rem;
+  color: black;
+  text-decoration: none;
+
+  z-index: 6000;
+}
+
+.work-back:hover {
+  text-decoration: underline;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -205,17 +251,15 @@ html, body {
     column-count: 1;
   }
 
-  .modal-content {
-    width: 90%;
-    margin: 10% auto;
+  .header {
+    padding: 1.5rem;
   }
 
-  .modal-layout {
-    grid-template-columns: 1fr;
+  .filter-bar {
+    padding: 1rem 1.5rem;
   }
 
-  .modal-text {
-    position: static;
-    max-width: 100%;
+  .grid {
+    padding: 1.5rem;
   }
 }
