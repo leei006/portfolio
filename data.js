@@ -199,5 +199,16 @@ window.photoData = [
         "img/thesis17.jpg","img/thesis18.jpg","img/thesis19.jpg","img/thesis20.jpg",
         "img/thesis21.jpg","img/thesis22.jpg"
       ]
+    },
+    {
+      id: 32,
+      title: "Quentin Bacon",
+      year: 2026,
+      medium: "Social Media",
+      description: "Content creation and art direction for Quentin's personal website and social media.",
+      category: "clients",
+      img: [
+        "img/quentinwebsite.jpeg", "video/qbvideo1.mp4", "video/qbvideo2.mp4"
+      ]
     }
   ];
