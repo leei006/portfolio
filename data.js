@@ -201,6 +201,17 @@ window.photoData = [
       ]
     },
     {
+      id: 33,
+      title: "Quentin Bacon",
+      year: 2026,
+      medium: "Website Design",
+      description: "Content creation and art direction for Quentin's personal website and social media. In my most recent work with Quentin we collaborated to create his recently launched photography retreat campaign.",
+      category: "design",
+      img: [
+        "video/qbvideo3.mp4", "video/qbvideo1.mp4"
+      ]
+    },
+    {
       id: 32,
       title: "Quentin Bacon",
       year: 2026,
