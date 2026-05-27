@@ -221,5 +221,16 @@ window.photoData = [
       img: [
         "img/quentinwebsite.jpeg", "video/qbvideo1.mp4", "video/qbvideo2.mp4"
       ]
+    },
+    {
+      id: 34,
+      title: "Seasonal Produce",
+      year: 2026,
+      medium: "illustration",
+      description: "Animated hand-drawn illustration brought to life in Procreate",
+      category: "illustration",
+      img: [
+        "video/peachanimation.mp4"
+      ]
     }
   ];
