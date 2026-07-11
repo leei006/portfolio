@@ -223,6 +223,17 @@ window.photoData = [
       ]
     },
     {
+      id: 36,
+      title: "BUTTERGIRL",
+      year: 2026,
+      medium: "Graphic Design",
+      description: "Art direction, illustrations, graphic design for print and digital media.",
+      category: "clients",
+      img: [
+        "img/buttergirl1.jpeg", "img/buttergirl2.jpeg", "img/buttergirl3.jpeg"
+      ]
+    },
+    {
       id: 34,
       title: "Seasonal Produce",
       year: 2026,
