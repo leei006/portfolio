@@ -73,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
       media = document.createElement("img");
       media.src = src;
       media.alt = item.title;
+      media.decoding = "async";
     }
 
     wrap.appendChild(media);

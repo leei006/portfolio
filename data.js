@@ -1,4 +1,26 @@
 window.photoData = [
+  {
+    id: 38,
+    title: "Holy Trinity (ButterGirlNYC)",
+    year: 2026,
+    medium: "Graphic Design",
+    description: "Cow illustration series for ButterGirlNYC",
+    category: "design",
+    img: [
+      "img/buttergirl_design1.png",
+    ]
+  },
+  {
+    id: 37,
+    title: "Holy Trinity (ButterGirlNYC)",
+    year: 2026,
+    medium: "illustration",
+    description: "Cow illustration series for ButterGirlNYC",
+    category: "illustration",
+    img: [
+      "img/buttergirl_illustration2.png", "img/buttergirl_illustration1.png"
+    ]
+  },
     {
       id: 29,
       title: "Item In Hand",
@@ -230,18 +252,7 @@ window.photoData = [
       description: "Art direction, illustrations, graphic design for print and digital media.",
       category: "clients",
       img: [
-        "img/buttergirl1.jpeg", "img/buttergirl2.jpeg", "img/buttergirl3.jpeg"
+        "img/buttergirl_design1.png", "img/buttergirl_illustration2.png", "img/buttergirl2.jpeg","img/buttergirl_illustration1.png",  "img/buttergirl1.jpeg",  
       ]
     },
-    {
-      id: 34,
-      title: "Seasonal Produce",
-      year: 2026,
-      medium: "illustration",
-      description: "Animated hand-drawn illustration brought to life in Procreate",
-      category: "illustration",
-      img: [
-        "video/peachanimation.mp4"
-      ]
-    }
   ];

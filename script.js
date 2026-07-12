@@ -2,31 +2,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const workContainer = document.getElementById("work-container");
 
-  // ======================
-  // MEDIA CREATION
-  // ======================
-  function createMediaElement(src, title) {
+// ======================
+// MEDIA CREATION
+// ======================
+function createMediaElement(src, title) {
 
-    if (src.toLowerCase().endsWith(".mp4")) {
+  if (src.toLowerCase().endsWith(".mp4")) {
 
-      const video = document.createElement("video");
-      video.src = src;
-      video.muted = true;
-      video.playsInline = true;
-      video.autoplay = true;
-      video.loop = true;
+    const video = document.createElement("video");
+    video.src = src;
+    video.muted = true;
+    video.playsInline = true;
+    video.autoplay = true;
+    video.loop = true;
+    video.preload = "metadata";
 
-      return video;
+    return video;
 
-    } else {
+  } else {
 
-      const img = document.createElement("img");
-      img.src = src;
-      img.alt = title;
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = title;
+    img.loading = "lazy";
+    img.decoding = "async";
 
-      return img;
-    }
+    return img;
   }
+}
 
   // ======================
   // GRID RENDER
@@ -49,7 +52,15 @@ document.addEventListener("DOMContentLoaded", () => {
       filtered.forEach(item => {
 
         const clientRow = document.createElement("div");
-        clientRow.classList.add("client-row");
+clientRow.classList.add("client-row");
+
+if (item.title === "Quentin Bacon") {
+  clientRow.classList.add("quentin");
+}
+
+if (item.title === "BUTTERGIRL") {
+  clientRow.classList.add("buttergirl");
+}
 
         clientRow.innerHTML = `
           <div class="client-title">${item.title}</div>
