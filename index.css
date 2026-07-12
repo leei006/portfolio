@@ -332,9 +332,7 @@ body {
 
   border-bottom: 1px solid #000;
 }
-.client-row:first-child {
-  border-top: 1px solid #000;
-}
+
 .client-row:nth-child(1) {
   background: #e4fffa;
 }
