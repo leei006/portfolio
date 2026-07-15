@@ -1,5 +1,16 @@
 window.photoData = [
   {
+    id: 40,
+    title: "Butter Drop (ButterGirlNYC)",
+    year: 2026,
+    medium: "Illustration",
+    description: "Cow illustration series for ButterGirlNYC",
+    category: "illustration",
+    img: [
+      "img/buttergirl_illustration4.png", "img/buttergirl_design2.jpeg",
+    ]
+  },
+  {
     id: 39,
     title: "HT Butter Drop (ButterGirlNYC)",
     year: 2026,
