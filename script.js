@@ -115,21 +115,42 @@ if (item.title === "BUTTERGIRL") {
   // ======================
   // FILTERS
   // ======================
-  const filterButtons = document.querySelectorAll(".filter-bar button");
-
+  const filterButtons = document.querySelectorAll(".filter-buttons button");
+  const filterSelect = document.querySelector(".filter-select");
+  
+  // Desktop buttons
   filterButtons.forEach(btn => {
-
     btn.addEventListener("click", () => {
-
+  
       filterButtons.forEach(b => b.classList.remove("active"));
-
       btn.classList.add("active");
-
+  
+      if (filterSelect) {
+        filterSelect.value = btn.dataset.filter;
+      }
+  
       renderGrid(btn.dataset.filter);
-
     });
-
   });
+  
+  // Mobile dropdown
+  if (filterSelect) {
+    filterSelect.addEventListener("change", () => {
+  
+      renderGrid(filterSelect.value);
+  
+      filterButtons.forEach(btn => {
+        btn.classList.toggle(
+          "active",
+          btn.dataset.filter === filterSelect.value
+        );
+      });
+  
+    });
+  }
+  if (filterSelect) {
+    filterSelect.value = "illustration";
+  }
 
   // ======================
   // INIT
