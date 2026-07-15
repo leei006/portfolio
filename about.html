@@ -22,13 +22,13 @@
         <div class="filter-bar">
     
           <div class="filter-buttons">
-            <button data-filter="illustration" class="active">i do illustrations</button>
-            <button data-filter="photo">i take photos</button>
-            <button data-filter="design">i design</button>
-            <button data-filter="clients">people i've worked with</button>
+            <a href="index.html?filter=illustration">i do illustrations</a>
+            <a href="index.html?filter=photo">i take photos</a>
+            <a href="index.html?filter=design">i design</a>
+            <a href="index.html?filter=clients">people i've worked with</a>
           </div>
     
-          <select class="filter-select">
+          <select class="filter-select" onchange="location = 'index.html?filter=' + this.value;">
             <option value="illustration">i do illustrations</option>
             <option value="photo">i take photos</option>
             <option value="design">i design</option>
