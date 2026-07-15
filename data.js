@@ -249,10 +249,10 @@ window.photoData = [
       title: "Quentin Bacon",
       year: 2026,
       medium: "Social Media",
-      description: "Content creation and art direction for Quentin's personal website and social media.",
+      description: "I have assisted Quentin on multiple photo sets for cook books. I have also worked on content creation and art direction for Quentin's personal website and social media.",
       category: "clients",
       img: [
-        "img/quentinwebsite.jpeg", "video/qbvideo1.mp4", "video/qbvideo2.mp4"
+        "img/quentinshoot.jpeg", "img/quentinwebsite.jpeg", "video/qbvideo1.mp4", "video/qbvideo2.mp4"
       ]
     },
     {

@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
     caption.classList.add("work-caption"); // 👈 THIS enforces Aleo via CSS
 
     caption.style.position = "fixed";
-    caption.style.bottom = "30px";
+    caption.style.bottom = "60px";
     caption.style.left = "30px";
 
     caption.innerHTML = `
